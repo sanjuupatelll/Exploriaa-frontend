@@ -1,0 +1,230 @@
+/* Grid layout for 4 cards in a single row */
+.grid-container {
+    top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards in a row */
+    gap: 5px; /* Reduced space between cards */
+    margin: 20px auto;
+    max-width: 1350px; /* Limit overall width */
+    padding: 30px;
+    justify-content: center;
+    background-color: #fafafa;
+    border-radius: 8px;
+  }
+  
+  .grid-item {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Card styling */
+  .card {
+    position: relative;
+    text-align: left;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Fixed RGBA format */
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px; /* Adjust card width */
+    background-color: #ffffff;
+    margin-top: 25px;
+    display: flex; /* Ensure flex container */
+    flex-direction: column;
+  }
+  
+  /* Image slider styling */
+  .image-slider {
+    width: 100%;
+    height: 150px; /* Adjust height */
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  /* Image styling inside the slider */
+  .image-slide img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Prevent images from exceeding the container */
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  
+  /* Card content */
+  .card-content {
+    padding: 10px;
+    background-color: #fff;
+    flex-grow: 1;
+  }
+  
+  .card-content h3 {
+    font-size: 16px;
+    margin: 5px 0;
+    font-weight: bold;
+  }
+  
+  .card-content .days,
+  .card-content .details {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .card-content .price {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .card-content .rating {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 18px; /* Align rating and reviews to the right */
+    margin-left: 80px;
+    align-items: center;
+    font-size: 14px;
+    color: #ff9800; /* Star color */
+    gap: 3px; /* Adds space between the star and rating text */
+  }
+  
+  .rating span {
+    color: #333; /* Text color for reviews */
+    font-size: 12px; /* Same size as the rating text */
+  }
+  
+  .card-content .card-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding: 10px 20px;
+    background-color: #C4242B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    gap: 10px;
+  }
+  
+  .abc {
+    margin-right: auto;
+  }
+  
+  .card-content .card-button:hover {
+    background-color: #b4161e;
+  }
+  
+  .slider-container {
+    position: relative;
+  }
+  
+  .slider-item {
+    position: relative;
+  }
+  
+  .slider-images {
+    position: relative;
+    height: 400px; /* Adjust as needed */
+  }
+  
+  .slider-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .country-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: to make the text stand out */
+    text-align: flex-right;
+    z-index: 10;
+  }
+  
+  .country-name {
+    position: absolute;
+    left: 10px;
+    font-size: 24px; /* Adjust the size as needed */
+    font-weight: bold;
+    color: #333; /* Choose a suitable color */
+    text-align: right;
+    margin-bottom: 10px; /* Add some spacing below */
+    text-transform: uppercase; /* Makes the text uppercase */
+  }
+  
+  /* Responsive for mobile */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Show one card per row */
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards in a row on medium screens */
+    }
+  }
+  
+  .list-page-container {
+    position: absolute;
+    right: 10%;
+    display: flex;
+    justify-content: space-between; /* This will place items on opposite ends */
+    align-items: center; /* Vertically center items */
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Container holding the country name and button separately */
+  .country-name-container {
+    margin-top: 20px;
+    position: absolute;
+    left: 130px;
+    margin-bottom: 10px;
+  }
+  
+    
+  
+  /* Adjust the positioning of country name and button as needed */
+  .country-name-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    /* Any specific styling for the country name */
+  }
+  
+  
+  
+  /* Flex container for Days and Rating */
+  .info-container {
+    display: flex;              /* Enables flexbox */
+    justify-content: space-between; /* Places items on opposite ends */
+    align-items: center;        /* Aligns vertically in the center */
+    margin-bottom: 5px;         /* Space below the row */
+  }
+  
+  /* Days styling */
+  .days {
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  /* Rating styling */
+  .rating {
+    display: flex;
+    align-items: center;        /* Align star and text vertically */
+    font-size: 14px;
+    color: #ff9800;             /* Star color */
+    gap: 3px;                   /* Space between star and rating number */
+  }
+  
+  .rating span {
+    color: #333;                /* Text color for review count */
+    font-size: 12px;            /* Smaller font for review count */
+  }
+  

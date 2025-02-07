@@ -1,0 +1,86 @@
+/* Main Navbar */
+.navbar {
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    align-items: center; /* Vertically align all items */
+    justify-content: space-between; /* Distribute items with space between them */
+    padding: 0 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navbar Container */
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures even spacing between groups */
+    gap: 20px; /* Adjust gap as needed between items */
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Logo Container */
+  .logo-container {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between logo and text */
+  }
+  
+  /* Logo */
+  .logo {
+    width: auto;
+    height: 40px; /* Adjust logo size */
+  }
+  
+  /* Website Name */
+  .website-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #c4242b;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    flex: 1; /* Allow the search bar to take up available space */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    max-width: 400px; /* Adjust max width */
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Currency Dropdown */
+  .currency-dropdown {
+    display: flex;
+    align-items: center;
+  }
+  
+  .currency-dropdown select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Register Button */
+  .register-button {
+    padding: 8px 16px;
+    background-color: #c4242b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .register-button:hover {
+    background-color: #a31d23;
+    transform: scale(1.05);
+  }
+  

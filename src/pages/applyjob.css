@@ -1,0 +1,225 @@
+/* Apply Job Section Styles */
+
+.apply-job-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 50px 20px;
+  }
+  
+  .apply-job-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .apply-job-text {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .apply-job-subheading {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .apply-job-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .apply-job-heading .highlight {
+    color: #ff4c4c;
+  }
+  
+  .apply-job-description {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .apply-job-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .apply-job-image {
+    max-width: 100%;
+    
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    border: 3px solid #ff4c4c;
+  }
+  
+  .irregular-image {
+    width: auto;
+    height: auto;
+    clip-path: polygon(
+      15% 5%, 85% 0%, 95% 25%, 80% 90%, 20% 95%, 5% 50%
+    ); /* Custom irregular shape */
+    border: 5px solid #ff4c4c; /* Optional: Red border */
+    object-fit: contain;
+  }
+  
+  .apply-job-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #ffff;
+  
+  }
+  
+  .apply-job-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  /* Left Side: Job Details */
+  .apply-job-details {
+    flex: 2; /* Takes more space */
+    padding-right: 50px;
+  }
+  
+  .job-box {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  }
+  
+  .job-box h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .job-box p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px; /* Adds spacing before bullet points */
+    line-height: 1.2;
+  }
+  
+  .job-box p, 
+  .job-box ul {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.2;
+  }
+  
+  .job-box ul {
+    padding-left: 20px;
+  }
+  
+  .job-box ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  /* Right Side: Apply Form */
+  .apply-job-form-container {
+    flex: 1; /* Smaller width */
+    max-width: 350px;
+    background: white;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .form-heading {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .apply-job-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .apply-job-form input,
+  .apply-job-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .submit-button {
+    background-color: #C4242B;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .submit-button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .apply-job-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .apply-job-details {
+      width: 100%;
+      padding-right: 0;
+      text-align: center;
+    }
+  
+    .apply-job-form-container {
+      width: 90%;
+      margin-top: 20px;
+    }
+  }
+
+/* Ensure the list has bullet dots */
+.bullet-list {
+  list-style-type: disc !important; /* Forces bullet points */
+  padding-left: 20px !important; /* Indents bullets properly */
+  margin-left: 20px !important; /* Ensures bullets are visible */
+}
+
+/* Ensure list items are spaced and styled */
+.bullet-list li {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 16px;
+  display: list-item !important; /* Ensures bullets are rendered */
+}
+
+/* If inside a flex container, make sure it allows bullets */
+.apply-job-details {
+  display: block !important; /* Ensures lists behave properly */
+}
+
+/* Sometimes 'ul' inside flex may remove bullets, so ensure it allows bullets */
+.job-box ul {
+  list-style: disc !important;
+  margin-left: 20px !important;
+  padding-left: 20px !important;
+}
+
+  

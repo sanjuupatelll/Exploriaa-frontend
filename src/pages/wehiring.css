@@ -1,0 +1,383 @@
+
+.we-hiring-section {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1531844251246-9a1bfaae09fc?q=80&w=1832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* White Overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .content {
+    text-align: left;
+    padding: 20px;
+    margin-left: 100px;
+  }
+  
+  .subheading {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0d0d0d;
+    margin-bottom: 10px;
+  }
+  
+  .heading {
+    font-size: 48px;
+    font-weight: 800;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  .heading span {
+    color: #e63946;
+  }
+  
+  .description {
+    font-size: 18px;
+    color: #1d1d1d;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  
+  .join-button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #e63946;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .join-button:hover {
+    background-color: #cc2d3b;
+  }
+
+ /* Career Section Styles */
+.career-section {
+    text-align: center;
+    padding: 60px;
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  .career-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .career-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Image Slider Wrapper */
+  .image-slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  /* Gradient Effect on Both Sides */
+  .image-slider-wrapper::before,
+  .image-slider-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  /* Left Gradient */
+  .image-slider-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+  
+  /* Right Gradient */
+  .image-slider-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+  
+  /* Image Slider */
+  .image-slider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: max-content;
+  }
+  
+  /* Clockwise (Left to Right) */
+  .scroll-right {
+    animation: scroll-right 30s linear infinite;
+  }
+  
+  /* Anti-Clockwise (Right to Left) */
+  .scroll-left {
+    animation: scroll-left 30s linear infinite;
+  }
+  
+  /* Common Image Styling */
+  .slider-img {
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px #8a8a8a;
+  }
+  
+  /* Scroll Right (Clockwise) */
+  @keyframes scroll-right {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Scroll Left (Anti-Clockwise) */
+  @keyframes scroll-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  
+  @media (max-width: 1024px) {
+    .career-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .hero-heading {
+      font-size: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .career-gallery {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .hero-section {
+      height: 400px;
+    }
+  
+    .hero-heading {
+      font-size: 35px;
+    }
+  
+    .hero-description {
+      font-size: 16px;
+    }
+  
+    .join-button {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  }
+
+  .custom-shape-divider-top-1738752979 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1738752979 svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 85px; /* Adjust height here */
+}
+
+.custom-shape-divider-top-1738752979 .shape-fill {
+    fill: #FFFFFF; /* Change the fill color */
+}
+
+
+/* Job Section Styles */
+.job-section {
+    background: linear-gradient(to bottom, #C4242B, #FF4B55);
+    padding: 60px 20px 40px; /* Reduced padding for smaller screens */
+    border-radius: 6px; /* Added curve to the bottom */
+    margin: 20px auto;
+    max-width: 100%;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Filter Buttons */
+.job-filters {
+    display: flex;
+    justify-content: left;
+    margin-left: 170px; /* Center-align for smaller screens */
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
+}
+
+.filter-button {
+    background-color: #C4242B;
+    color: white;
+    border: solid white;
+    border-radius: 6px;
+    padding: 8px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.filter-button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Job List */
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px; /* Added padding for smaller screens */
+}
+
+/* Job Card */
+.job-card {
+    margin-left: 150px;
+    margin-right: 150px;
+    background: #FFFFFF1A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.job-card:hover {
+    transform: translateY(-3px);
+}
+
+.job-details {
+    color: white;
+    flex: 1; /* Makes the content expand as needed */
+}
+
+.job-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.job-info {
+    font-size: 14px;
+}
+
+/* Apply Button */
+.apply-button {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.apply-button:hover {
+    background-color: #ff8482;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Responsive Design with Media Queries */
+@media (max-width: 1024px) {
+    .job-filters {
+        margin-left: 50px; /* Adjust margins for medium screens */
+        margin-right: 50px;
+    }
+
+    .job-card {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .job-filters {
+        margin-left: 20px; /* Further reduced margins for smaller screens */
+        margin-right: 20px;
+    }
+
+    .job-card {
+        margin-left: 20px;
+        margin-right: 20px;
+        flex-direction: column; /* Stack job card content vertically */
+        text-align: center; /* Center-align for better readability */
+    }
+
+    .apply-button {
+        margin-top: 10px; /* Add space between content and button */
+    }
+}
+
+@media (max-width: 480px) {
+    .job-filters {
+        margin: 0 auto; /* Center filters */
+        justify-content: center; /* Center-align */
+        gap: 5px; /* Reduce gap between buttons */
+    }
+
+    .job-card {
+        margin: 10px; /* Reduced margins for very small screens */
+        padding: 10px; /* Reduced padding */
+    }
+
+    .job-title {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .job-info {
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .apply-button {
+        padding: 6px 16px; /* Smaller button size */
+    }
+}

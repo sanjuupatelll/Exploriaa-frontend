@@ -1,0 +1,88 @@
+/* Main Container */
+.privacy-policy-container {
+    max-width: 1000px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Headings */
+  .privacy-policy-container h1 {
+    font-size: 26px;
+    color: #222;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-policy-container h2 {
+    font-size: 18px;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 20px;
+  }
+  
+  .privacy-policy-container h3 {
+    font-size: 18px;
+    color: #444;
+    margin-top: 15px;
+  }
+  
+  /* Paragraphs */
+  .privacy-policy-container p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  /* Bullet List with Dots */
+  .privacy-policy-container ul {
+    list-style-type: disc; /* Ensures bullet points */
+    margin-left: 20px;
+    padding-left: 20px;
+  }
+  
+  .privacy-policy-container ul li {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  /* Custom Bullet Dots */
+  .privacy-policy-container ul li::before {
+    content: "●"; /* Custom bullet dot */
+    color: #333;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+  
+  /* Links */
+  .privacy-policy-container a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .privacy-policy-container a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Last Updated */
+  .privacy-policy-container em {
+    font-size: 14px;
+    color: #888;
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
