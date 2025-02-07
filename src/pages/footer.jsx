@@ -4,6 +4,14 @@ import "./Footer.css";
 import logo from "/src/assets/images/logo2.svg";
 
 const Footer = () => {
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Adds a smooth scrolling effect
+    });
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -23,18 +31,20 @@ const Footer = () => {
         <div className="footer-section">
           <h4>About Thrillophilia</h4>
           <ul>
-            <li><Link to="/about">About Us</Link></li>  
-            <li><Link to="/wehiring">We Are Hiring</Link></li>  
-            <li><Link to="/termsandconditions">Terms & Conditions</Link></li>  {/* ✅ Linked */}
-            <li><Link to="/policy">Privacy Policies</Link></li>  {/* ✅ Add if available */}
-            <li><Link to="/support">Support</Link></li>  
+            <li><Link to="/about" onClick={scrollToTop}>About Us</Link></li>
+            <li><Link to="/wehiring" onClick={scrollToTop}>We Are Hiring</Link></li>
+            <li><Link to="/termsandconditions" onClick={scrollToTop}>Terms & Conditions</Link></li>
+            <li><Link to="/policy" onClick={scrollToTop}>Privacy Policies</Link></li>
+            <li><Link to="/support" onClick={scrollToTop}>Support</Link></li>
+            
           </ul>
         </div>
 
         <div className="footer-section">
           <h4>For Brands</h4>
           <ul>
-            <li><a href="#">Partner With Us</a></li>
+            <li> <Link to="/partnerwithus" onClick={scrollToTop}>Partner With Us</Link></li>
+            
           </ul>
         </div>
 

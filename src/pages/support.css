@@ -1,0 +1,296 @@
+/* Container */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligning content to the left */
+  }
+  
+  /* Header Section - Increased Height */
+  .header {
+    width: 100%;
+    background-color: #C4242B;
+    padding: 80px 0; /* Increased padding to make the red section bigger */
+    text-align: left;
+    position: relative;
+    color: white;
+    height: 300px;
+  }
+  
+  .header h1 {
+    margin-left: 50px;
+    font-size: 32px; /* Made the heading slightly larger */
+    margin-bottom: 15px;
+  }
+  
+  .header input {
+    text-align: start;
+    margin-left:50px;
+    width: 20%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+  }
+  
+  /* Background Text */
+  /* Background Container */
+.background {
+    background-color: #C4242B; /* Red background color */
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Background Text Style */
+  .background-text {
+    position: absolute;
+    font-size: 100px; /* Adjust the size of the text */
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.1); /* Light transparent white */
+    z-index: 0; /* Ensure it stays in the background */
+    user-select: none; /* Prevent text selection */
+    pointer-events: none; /* Ignore pointer events */
+  }
+  
+  /* Upper Left Text */
+  .background-text.left {
+    top: -10%; /* Upper side */
+    left: -13%; /* Left side */
+  }
+  
+  /* Lower Right Text */
+  .background-text.right {
+    bottom: -10%; /* Lower side */
+    right: -12%; /* Right side */
+  }
+  .background-text.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center align */
+    text-align: center;
+  }  
+  
+  /* Content Section - Moved to the Left */
+  .content {
+    text-align: left;
+    margin-left: 200px;
+    margin-left: 100px;
+    width: 60%; /* Reduced width so it stays on the left */
+    margin: 40px 5%; /* Shifted to the left */
+  }
+
+  h2 {
+    font-size: 2 rem; /* Adjust size based on your design */
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Neutral, dark text color */
+    margin: 20px 0; /* Add spacing above and below */
+    text-align: left; /* Center-align the heading */
+    margin-left: 150px;
+    letter-spacing: 0.5px; /* Slight spacing for better readability */
+  }
+    
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Changed to 2 columns instead of 3 */
+    gap: 25px;
+    margin-left: 150px;
+    width: 1000px;
+    height: 350px;
+  }
+  
+  /* Cards */
+  .card {
+    background: white;
+    padding: 15px;
+    border: 0.5px solid #e2e2e2;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
+  }
+  
+  .card h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .read-more {
+    color: #C4242B;
+    font-weight: bold;
+  }
+  
+  /* Submit Ticket Card */
+  .ticket-card {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(244, 244, 244, 0.1);
+    display: flex;
+    align-items: center;
+    max-width: 400px; /* Adjust to fit your layout */
+    margin-top: 20px;
+    height: 150px;
+    margin-left: 150px;
+    width: 1000px;
+    border: 0.5px solid #e2e2e2;
+  }
+  
+  .ticket-container {
+    display: flex;
+    align-items: flex-start; /* Align the text and icon */
+    line-height: 1.6;
+    gap: 15px;
+  }
+  .ticket-container p {
+    margin-bottom: 10px;
+}
+  
+  .ticket-icon {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px; /* Space between icon and text */
+  }
+  .ticket-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.9; /* Increase space between lines */
+}
+  .h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .ticket-text h5 {
+    margin: 0 ;
+    font-size: 1rem;
+    color: #555;
+    font-weight: normal;
+        
+  }
+
+  .ticket-text p {
+    margin: 5px 0 0;
+    color: #555;
+}
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background: white;
+    width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .popup-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .popup-select,
+  .popup-textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .popup-select {
+    height: 40px;
+  }
+  
+  .popup-textarea {
+    height: 80px;
+    resize: none;
+  }
+  
+  /* Upload Section */
+.upload-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .upload-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: 120px;
+    background: #f9f9f9;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  .upload-box:hover {
+    border: 2px dashed #ddd;
+  }
+  
+  .upload-icon {
+    font-size: 1.5rem;
+    color: #555;
+  }
+  
+  .upload-text {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  
+  .popup-submit-btn {
+    background: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .popup-submit-btn:hover {
+    background: #b71c1c;
+  }
+  
+  

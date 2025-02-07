@@ -103,7 +103,7 @@ const TermsAndConditions = () => {
       <h2>Digital Millennium Copyright Act Compliance</h2>
       <p>
         If you believe your work has been copied in a way that constitutes copyright infringement, provide our team with the required notification.
-        We take these claims seriously and comply with the **DMCA (Digital Millennium Copyright Act)**.
+        We take these claims seriously and comply with the DMCA (Digital Millennium Copyright Act).
       </p>
       <ul>
         <li>An electronic or physical signature of the person authorized to act on behalf of the copyright owner.</li>
@@ -141,7 +141,7 @@ const TermsAndConditions = () => {
       </p>
 
       <p>
-        Exploriaa will only respond to notices that **comply with the above requirements**.
+        Exploriaa will only respond to notices that comply with the above requirements.
         We will investigate your claim and notify you accordingly.
       </p>
 

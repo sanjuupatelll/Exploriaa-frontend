@@ -1,0 +1,303 @@
+.partner-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    background: url('https://plus.unsplash.com/premium_photo-1733317262881-b605b2775230?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    color: white;
+    text-align: left;
+    height: 100vh;
+    padding: 60px;
+  }
+  
+  .partner-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 0; 
+  }
+  
+  .partner-left {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .partner-left h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-top: 250px;
+    margin-left: 100px;
+  }
+  
+  .partner-left h1 span {
+    background: linear-gradient(90deg, #C4242B, #FF4B55);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
+  .partner-left p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-left: 100px;
+  }
+
+  .form-card {
+    background: #ffffff; /* White background for the form */
+    padding: 15px 25px; /* Balanced padding for compact design */
+    width: 100%;
+    max-width: 450px; /* Sets a maximum width for the form */
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation */
+    text-align: center; /* Centers text inside the card */
+    position: relative; /* Ensures it layers above the overlay */
+    z-index: 1; /* Keeps the form above the background */
+    margin: 0 auto; /* Ensures horizontal centering */
+    justify-content: center;
+    margin-left: 400px;
+    height: 620px;
+  }
+  
+  /* Heading and description */
+  .form-card h2 {
+    margin-top: 10px;
+    
+    font-size: 1.6rem; /* Slightly larger font size for the heading */
+    color: #333; /* Dark color for contrast */
+  }
+  
+  .form-card p {
+    font-size: 0.85rem; /* Smaller font size for the description */
+    color: #666; /* Neutral color for subtle contrast */
+    margin: 10px 0 20px; /* Adds space below the description */
+  }
+  
+  /* Form inputs */
+  form input,
+  form select,
+  form textarea {
+    width: 100%;
+    padding: 10px; /* Adds comfortable padding inside inputs */
+    margin-bottom: 15px; /* Adds spacing between inputs */
+    border: 1px solid #ddd; /* Light border for inputs */
+    border-radius: 5px; /* Rounded edges for inputs */
+    font-size: 0.9rem;
+  }
+  
+  form textarea {
+    resize: none; /* Prevent resizing */
+    height: 70px; /* Fixed height for textarea */
+  }
+  
+  form select {
+    color: #333;
+  }
+  
+  /* Submit button */
+  form button {
+    background-color: #c4242b;
+    color: #fff;
+    padding: 12px 20px; /* Comfortable padding for the button */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #ff4b55; /* Hover effect for the button */
+  }
+
+  .partner-exploriaa {
+    margin-top: 50px;
+    padding: 40px;
+    background-color: #ffffff;
+    text-align: center;
+    margin-left: 50px;
+    gap:1px;
+    margin-top: 10px;
+  }
+  
+  .partner-exploriaa h2 {
+    font-weight: bold;
+    font-size: 28px;
+    color: #333;
+  }
+  h2 {
+    line-height: 0.5; /* Reduce line spacing */
+    margin-bottom: 8px; /* Reduce bottom margin */
+}
+
+  
+  .partner-exploriaa .highlight {
+    background: linear-gradient(90deg, #C4242B, #FF4B55);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h5 {
+    font-size: 14px;
+    text-align: left; 
+    margin-left: 150px; 
+    margin-bottom: 80px;
+    margin-top: 20px;
+    font-weight: 100;
+    line-height: 0.4; /* Adjust to make spacing tighter */
+    margin-bottom: 5px; /* Reduce bottom margin */
+}
+
+  
+  /* Fixing Image Container */
+  .category-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  
+  /* Category Card */
+  .category-card {
+    width: 220px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Text Above Image */
+  .category-card p {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none; 
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: max-content;
+  }
+  
+  /* Fixed Image Size */
+  .category-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0; 
+    display: block; 
+  }
+
+h3 {
+    font-size: 24px; /* Adjust font size */
+    font-weight: bolder;
+    color: #333;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+
+h3 span {
+    color: #C4242B; 
+    font-weight: bolder;
+}
+
+ .stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .stat-box {
+    width: 250px;
+    height: 150px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(255, 255, 255);
+  }
+ 
+  
+  .stat-box h4 {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 26px;
+    color: #C4242B;
+  }
+  
+  .stat-box p {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+  }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 60%;
+    background: #ffffff;
+    border-radius: 15px;
+    justify-content: right;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: -130px;
+}
+.grid-item {
+    position: relative;
+    width: 100%;
+    height: 180px; 
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+.grid-item h3 {
+    position: relative;
+    bottom: 20px;
+    left: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
+
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}

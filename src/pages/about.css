@@ -322,6 +322,8 @@
   .join-team-content h2 {
     font-size: 1.875rem;
     font-weight: bold;
+    align-items: center;
+    margin-left: -5px;
     margin-bottom: 1rem;
     white-space: nowrap;
   }
@@ -340,7 +342,7 @@
   .join-team-button {
     margin-left: -330px;
     background: linear-gradient(90deg, #C4242B, #E14249);
-    color: white;
+    color: white; 
     padding: 0.5rem 1.5rem;
     border: none;
     border-radius: 5px;

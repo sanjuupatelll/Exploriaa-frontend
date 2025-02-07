@@ -11,7 +11,7 @@ import ApplyJob from "./pages/applyjob"; // Importing Apply Job section
 import TermsAndConditions from "./pages/termsandconditions";
 import Policy from "./pages/policy";
 import Support from "./pages/support";
-
+import PartnerWithUs from "./pages/partnerwithus";
 
 function App() {
   return (
@@ -28,6 +28,7 @@ function App() {
           <Route path="/termsandconditions" element={<TermsAndConditions/>} /> {/* Apply Job Route */}
           <Route path="/policy" element={<Policy/>} /> {/* Apply Job Route */}
           <Route path="/support" element={<Support/>} />
+          <Route path="/partnerwithus" element={<PartnerWithUs/>} />
           
           </Routes>
 

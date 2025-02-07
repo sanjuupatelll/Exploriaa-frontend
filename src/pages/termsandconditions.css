@@ -26,12 +26,17 @@
     font-size: 16px;
     color: #333;
     margin-bottom: 10px;
+    text-align: justify;
+    margin-left: 5px;
+
   }
   
   .terms-container h2 {
     font-size: 20px;
     font-weight: bold;
     margin-top: 20px;
+    align-items: center;
+    margin-left: 12px;
   }
   
   .terms-container a {
