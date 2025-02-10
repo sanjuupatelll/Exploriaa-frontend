@@ -189,72 +189,79 @@ body {
     display: flex;
     align-items: flex-start; /* Align items at the top */
     justify-content: flex-start; /* Space between tagline and form */
-  }
-  
-  .tagline {
+}
+
+.tagline {
     flex: 1; /* Tagline takes up remaining space */
-  }
-  
-  .inquiry-form {
+}
+
+.inquiry-form {
     width: 350px;
     padding: 30px;
     background: #fff;
     border-radius: 5px;
     position: relative;
     left: 1000px;
-    margin-top: -700px;
     border: 1px solid #ccc;
-  }
-  
-  .inquiry-form h2 {
+    margin-top: -700px; /* Removed negative margin */
+}
+
+.inquiry-form h2 {
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 10px;
-  }
-  
-  .inquiry-form .price {
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: left;
+    margin-left: 0px;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.inquiry-form .price {
     font-size: 20px;
     font-weight: 700;
+    margin-bottom: 16px; /* Fixed margin-bottom */
     color: #ff5722;
-  }
-  
-  .inquiry-form .old-price {
+    display: block; /* Ensures margin works */
+}
+
+.inquiry-form .old-price {
     font-size: 16px;
     text-decoration: line-through;
     color: gray;
     margin-left: 10px;
-  }
-  
-  .inquiry-form form {
+}
+
+.inquiry-form form {
     display: flex;
     flex-direction: column;
-  }
-  
-  .inquiry-form input,
-  .inquiry-form textarea {
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-  }
-  
-  .inquiry-form .form-row {
+}
+
+.inquiry-form .form-row {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .inquiry-form .form-row input {
+}
+
+.inquiry-form .form-row input {
     width: 48%;
-  }
-  
-  .inquiry-form textarea {
+}
+
+.inquiry-form textarea {
     height: 80px;
     resize: none;
-  }
-  
-  .submit-btn {
+}
+
+.submit-btn {
     width: 100%;
     padding: 12px;
     background: #ff5722;
@@ -265,11 +272,12 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s ease;
-  }
-  
-  .submit-btn:hover {
+}
+
+.submit-btn:hover {
     background: #e64a19;
-  }
+}
+  
   
   .destination-routes {
     margin-top: 20px;
@@ -639,6 +647,7 @@ body {
   margin-bottom: 15px;
   border-bottom: 2px solid #e0e0e0;
   padding-bottom: 5px;
+  margin-left: 10px;
 
 }
 
@@ -838,6 +847,7 @@ li {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    margin-left: 10px;
   }
   
   .review-card {
@@ -1088,8 +1098,8 @@ li {
 
 .view-all-button {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 50%;
+  right: 50%;
   width: 1000px;
   height: 1000px;
   display: flex; 

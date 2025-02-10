@@ -125,61 +125,57 @@
     font-weight: bold;
   }
   
-  /* Submit Ticket Card */
-  .ticket-card {
-    background: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(244, 244, 244, 0.1);
-    display: flex;
-    align-items: center;
-    max-width: 400px; /* Adjust to fit your layout */
-    margin-top: 20px;
-    height: 150px;
-    margin-left: 150px;
-    width: 1000px;
-    border: 0.5px solid #e2e2e2;
-  }
-  
-  .ticket-container {
-    display: flex;
-    align-items: flex-start; /* Align the text and icon */
-    line-height: 1.6;
-    gap: 15px;
-  }
-  .ticket-container p {
-    margin-bottom: 10px;
+ /* Submit Ticket Card */
+.ticket-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  margin: 20px auto;
+  height: auto;
+  border: 1px solid #e2e2e2;
+  transition: box-shadow 0.3s ease;
+  margin-left: 150px;
 }
-  
-  .ticket-icon {
-    width: 70px;
-    height: 70px;
-    margin-right: 15px; /* Space between icon and text */
-  }
-  .ticket-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.9; /* Increase space between lines */
-}
-  .h3 {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .ticket-text h5 {
-    margin: 0 ;
-    font-size: 1rem;
-    color: #555;
-    font-weight: normal;
-        
-  }
 
-  .ticket-text p {
-    margin: 5px 0 0;
-    color: #555;
+.ticket-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Elevation effect on hover */
 }
+
+.ticket-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between icon and text */
+}
+
+.ticket-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.ticket-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.ticket-text h3 {
+  margin: 0;
+  font-size: 1.25rem; /* Slightly larger heading */
+  font-weight: bold;
+  color: #333;
+}
+
+.ticket-text p {
+  margin: 5px 0 0;
+  font-size: 1rem; /* Standard text size */
+  color: #666;
+  line-height: 1.6;
+}
+
 
   .popup {
     position: fixed;

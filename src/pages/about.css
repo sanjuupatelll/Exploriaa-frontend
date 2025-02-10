@@ -126,6 +126,7 @@
   .team-section h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    text-align: center;
   }
   
   .team-section .highlight {
@@ -136,6 +137,8 @@
     font-size: 1.2rem;
     margin-bottom: 30px;
     color: #555;
+    text-align: center;
+    margin-left: 150px;
   }
   
   .team-grid {
@@ -152,7 +155,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(244, 239, 239, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     gap: 5px;
   }
@@ -177,7 +180,13 @@
     text-align: center;
     padding: 15px 0;
   }
-  
+
+  .team-info h2, 
+  .team-info h3 {
+    color: white; /* Explicitly setting white color for h2 and h3 */
+    margin: 0; /* Add margin-reset if necessary */
+}
+
   .team-info h3 {
     font-size: 1.2rem;
     margin: 0;
@@ -202,6 +211,12 @@
     text-align: center;
     padding: 20px;
   }
+  .join-info h2, 
+  .join-info h3 {
+    color: white; /* Explicitly setting white color for h2 and h3 */
+    margin: 0; /* Add margin-reset if necessary */
+}
+
   
   .join-info h3 {
     font-size: 1.5rem;

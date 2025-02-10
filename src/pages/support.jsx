@@ -55,7 +55,7 @@ const Support = () => {
             />
             <div className="ticket-text">
               <h3>Submit a Ticket</h3>
-              
+              <p>Need help? Submit a support ticket, and our team will assist you as soon as possible.</p>
             </div>
           </div>
         </div>
@@ -112,6 +112,7 @@ const Support = () => {
               </div>
               <button type="submit" className="popup-submit-btn">
                 Submit Ticket
+
               </button>
             </form>
           </div>
