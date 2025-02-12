@@ -83,14 +83,13 @@
   }
 
   h2 {
-    font-size: 2 rem; /* Adjust size based on your design */
+    font-size: 2rem; /* Fix typo from "2 rem" to "2rem" */
     font-weight: bold; /* Make the heading bold */
     color: #333; /* Neutral, dark text color */
-    margin: 20px 0; /* Add spacing above and below */
-    text-align: left; /* Center-align the heading */
-    margin-left: 150px;
+    margin: 20px auto; /* Center-align the heading properly */
+    text-align: center; /* Center text alignment */
     letter-spacing: 0.5px; /* Slight spacing for better readability */
-  }
+}
     
   /* Grid */
   .grid {
@@ -113,17 +112,18 @@
   .card h3 {
     font-size: 16px;
     font-weight: bold;
-  }
-  
-  .card p {
+}
+
+.card p {
     font-size: 14px;
     color: #555;
-  }
-  
-  .read-more {
+}
+
+.read-more {
     color: #C4242B;
     font-weight: bold;
-  }
+    cursor: pointer;
+}
   
  /* Submit Ticket Card */
 .ticket-card {

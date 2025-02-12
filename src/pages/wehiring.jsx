@@ -40,21 +40,20 @@ const WeHiring = () => {
     <div className="we-hiring-container">
       {/* Hero Section */}
       <div className="we-hiring-section">
-        <div className="overlay">
-          <div className="content">
-            <h5 className="subheading">Careers</h5>
-            <h1 className="heading">
-              Make Exploria <br />
-              <span>Your Next </span> <br />
-              <span> Destination </span>
-            </h1>
-            <p className="description">
-              We believe in a career that's just as adventurous as the trips we take.
-            </p>
-            <button className="join-button">Join Our Team</button>
-          </div>
-        </div>
-      </div>
+  <div className="content">
+    <h5 className="subheading">Careers</h5>
+    <h1 className="heading">
+      Make Exploria <br />
+      <span>Your Next </span> <br />
+      <span> Destination </span>
+    </h1>
+    <p className="description">
+      We believe in a career that's just as adventurous as the trips we take.
+    </p>
+    <button className="join-button">Join Our Team</button>
+  </div>
+</div>
+
 
       {/* Career Section */}
       <div className="career-section">

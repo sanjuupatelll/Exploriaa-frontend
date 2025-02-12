@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./pages/Navbar";
-import ImageSlider from "./pages/imageslider";// Correct path to ImageSlider
+import Homepage from "./pages/homepage"; // Correct path to ImageSlider
 import Banner from "./pages/banner";
 import Footer from "./pages/footer";
 import DetailPage from "./pages/detailpage";
@@ -20,7 +20,7 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<><Banner /><ImageSlider /></>} />
+          <Route path="/" element={<><Banner /><Homepage /></>} />
           <Route path="/detailpage" element={<DetailPage />} />
           <Route path="/about" element={<About />} /> {/* About Us Route */}
           <Route path="/wehiring" element={<WeHiring />} /> {/* We Hiring Route */}

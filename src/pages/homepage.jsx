@@ -2,9 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./ImageSlider.css";
+import "./homepage.css";
 
-const ImageSlider = () => {
+const Homepage = () => {
   const cardSliderSettings = {
     dots: false,
     infinite: true,
@@ -20,7 +20,7 @@ const ImageSlider = () => {
       cards: [
         {
           images: [
-            "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZHViYWl8ZW58MHx8MHx8fDA%3D",
+            "https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGR1YmFpfGVufDB8fDB8fHww",
             "https://images.unsplash.com/flagged/photo-1559717201-fbb671ff56b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHViYWl8ZW58MHx8MHx8fDA%3D",
           ],
@@ -314,9 +314,9 @@ const ImageSlider = () => {
           
   
           {/* Cards Container */}
-          <div className="grid-container">
+          <div className="layout-container">
             {countryData.cards.map((card, cardIndex) => (
-              <div key={cardIndex} className="grid-item">
+              <div key={cardIndex} className="layout-item">
                 <div className="card">
                   <div className="image-slider">
                     <Slider {...cardSliderSettings}>
@@ -363,5 +363,5 @@ const ImageSlider = () => {
   );
 }  
 
-export default ImageSlider;
+export default Homepage;
 

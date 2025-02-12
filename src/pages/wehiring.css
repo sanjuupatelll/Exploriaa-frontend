@@ -1,77 +1,88 @@
 
 .we-hiring-section {
-    position: relative;
-    background-image: url('https://images.unsplash.com/photo-1531844251246-9a1bfaae09fc?q=80&w=1832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-  }
-  
-  /* White Overlay */
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 50px;
-  }  
-  
-  .content {
-    text-align: left;
-    padding: 20px;
-    margin-left: 100px;
-  }
-  
-  .subheading {
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #000000;
-    margin-bottom: 10px;
-    text-align: left;
-    margin-left: 10px;
-  }
-  
-  .heading {
-    font-size: 48px;
-    font-weight: 800;
-    color: #000000;
-    margin-bottom: 20px;
-  }
-  
-  .heading span {
-    color: #e63946; 
-  }
-  
-  .description {
-    font-size: 18px;
-    color: #1d1d1d;
-    margin-bottom: 30px;
-    line-height: 1.5;
-  }
-  
-  .join-button {
-    font-size: 16px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #e63946;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .join-button:hover {
-    background-color: #cc2d3b;
-  }
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  overflow: hidden;
+}
+
+/* Background Image with Mask */
+.we-hiring-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1531844251246-9a1bfaae09fc?q=80&w=1832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  mask-image: linear-gradient(270deg, white 0%, rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.5) 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(270deg, white 0%, rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.3) 70%, transparent 100%);
+  z-index: 1; /* Below content */
+}
+
+/* Content on top of mask */
+.content {
+  position: relative; /* Ensures it's above the masked background */
+  z-index: 2; /* Higher than masked background */
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  max-width: 500px;
+}
+
+/* Subheading */
+.subheading {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-left: -390px;
+}
+
+/* Heading */
+.heading {
+  font-size: 48px;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.heading span {
+  color: #e63946;
+}
+
+/* Description */
+.description {
+  font-size: 18px;
+  color: #1d1d1d;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Button */
+.join-button {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(135deg, #C4242B, #FF4B55); /* Linear gradient from #C4242B to #FF4B55 */
+  padding: 12px 24px;
+  border: 2px solid #C4242B;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+  background: linear-gradient(135deg, #FF4B55, #C4242B); /* Reverse gradient on hover */
+}
+
 
  /* Career Section Styles */
 .career-section {
