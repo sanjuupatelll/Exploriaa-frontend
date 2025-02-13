@@ -5,11 +5,9 @@ import logo from "../assets/images/logo.svg"; // Import the logo image
 
 Modal.setAppElement("#root");
 
-const Navbar = () => {
+const Navbar = ({ onOpenAuthModal }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isSignUp, setIsSignUp] = useState(false); 
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,18 +23,11 @@ const Navbar = () => {
     };
   }, []);
 
-  // Open and close modal handlers
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setIsSignUp(false); 
-  };
-
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <img src={logo} alt="Exploriaa Logo" className="logo" /> {/* Logo added here */}
-        
+        <img src={logo} alt="Exploriaa Logo" className="logo" /> {/* Logo */}
+
         <div className="search-bar">
           <input type="text" placeholder="Search..." />
         </div>
@@ -51,61 +42,11 @@ const Navbar = () => {
           </select>
         </div>
 
-        <button onClick={openModal} className="register-button">
+        {/* Login/Register Button */}
+        <button onClick={onOpenAuthModal} className="register-button">
           Register
         </button>
       </div>
-
-      {/* Modal */}
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        contentLabel="Authentication Modal"
-        className="modal-content"
-        overlayClassName="modal-overlay"
-      >
-        <div className="modal-body">
-          {isSignUp ? (
-            <form className="auth-form">
-              <h2>Register</h2>
-              <input type="text" placeholder="Username" />
-              <input type="email" placeholder="Email" />
-              <input type="password" placeholder="Password" />
-              <button type="submit" className="submit-button">
-                Register
-              </button>
-              <p className="toggle-text">
-                Already have an account?{" "}
-                <span
-                  className="toggle-link"
-                  onClick={() => setIsSignUp(false)}
-                >
-                  Sign In
-                </span>
-              </p>
-            </form>
-          ) : (
-            <form className="auth-form">
-              <h2>Sign In</h2>
-              <input type="email" placeholder="Email" />
-              <input type="password" placeholder="Password" />
-              <button type="submit" className="submit-button">
-                Sign In
-              </button>
-              <div className="toggle-text">
-                <p>
-                  You are a new user?{" "}
-                  <button
-                    onClick={() => setIsSignUp(true)}
-                    className="secondary-button">
-                    Sign Up
-                  </button>
-                </p>
-              </div>
-            </form>
-          )}
-        </div>
-      </Modal>
     </nav>
   );
 };

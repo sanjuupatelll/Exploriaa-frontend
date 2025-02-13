@@ -155,7 +155,7 @@ const PartnerWithUs = () => {
           </div>
         </div>
         <div className="marketing-section">
-        <h2 className="marketing-heading">Exploriaa Marketing Solutions</h2>
+        <h1 className="marketing-solution-heading">Exploriaa Marketing Solutions</h1>
       <p className="marketing-subheading">
         Leverage our custom marketing solutions to pitch your brand to our travel-hungry audience.
       </p>
@@ -176,7 +176,7 @@ const PartnerWithUs = () => {
     </div>
 
     <div className="brands-section">
-      <div><h2 className="brands-heading">Brands That Love Us</h2></div>
+      <div><h1 className="brands-heading">Brands That Love Us</h1></div>
       <div className="brands-logos">
         {brandLogos.map((brand, index) => (
           <img key={index} src={brand.src} alt={brand.alt} />
@@ -184,7 +184,6 @@ const PartnerWithUs = () => {
       </div>
       <button className="brands-button">GET IN TOUCH</button>
     </div>
-
       </div>
     </div>
   );

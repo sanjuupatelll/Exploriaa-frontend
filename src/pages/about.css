@@ -127,6 +127,7 @@
     font-size: 2.5rem;
     margin-bottom: 10px;
     text-align: center;
+    margin-left: 10px;
   }
   
   .team-section .highlight {
@@ -138,7 +139,7 @@
     margin-bottom: 30px;
     color: #555;
     text-align: center;
-    margin-left: 150px;
+    margin-left: 10px;
   }
   
   .team-grid {

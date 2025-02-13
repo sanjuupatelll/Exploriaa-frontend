@@ -166,7 +166,7 @@
 
 @media (max-width: 1024px) {
   .layout-container {
-    layout-template-columns: repeat(2, 1fr); /* 2 cards in a row on medium screens */
+   layout-template-columns: repeat(2, 1fr); /* 2 cards in a row on medium screens */
   }
 }
 

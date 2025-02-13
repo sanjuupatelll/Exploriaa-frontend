@@ -76,19 +76,20 @@
   /* Content Section - Moved to the Left */
   .content {
     text-align: left;
-    margin-left: 200px;
-    margin-left: 100px;
+    margin-left: 150px;
     width: 60%; /* Reduced width so it stays on the left */
     margin: 40px 5%; /* Shifted to the left */
   }
 
   h2 {
-    font-size: 2rem; /* Fix typo from "2 rem" to "2rem" */
+    font-size: 28px; /* Fix typo from "2 rem" to "2rem" */
     font-weight: bold; /* Make the heading bold */
     color: #333; /* Neutral, dark text color */
     margin: 20px auto; /* Center-align the heading properly */
-    text-align: center; /* Center text alignment */
+    text-align: left; /* Center text alignment */
+    margin-left: 150px;
     letter-spacing: 0.5px; /* Slight spacing for better readability */
+    white-space: nowrap;
 }
     
   /* Grid */
@@ -99,6 +100,7 @@
     margin-left: 150px;
     width: 1000px;
     height: 350px;
+    margin-bottom: 50px;
   }
   
   /* Cards */
@@ -112,6 +114,8 @@
   .card h3 {
     font-size: 16px;
     font-weight: bold;
+    text-align: left;
+    margin: 10px;
 }
 
 .card p {

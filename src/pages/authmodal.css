@@ -1,0 +1,304 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Container */
+  .modal-container {
+    background: white;
+    width: 1000px;
+    height: 600px; /* Square Shape */
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Modal Content - Two Sections */
+  .modal-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  
+  /* Left Side - Image */
+  .modal-image {
+    width: 50%;
+    background-color: #eee;
+  }
+  
+  .modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+/* Right Side - Form */
+.modal-form {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Tab Switch Buttons */
+  .tab-switch {
+    display: flex;
+    justify-content: start;
+   
+  }
+  
+  .tab-switch button {
+   
+    padding: 12px 24px;
+    border: none;
+    background: #f0f0f0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .tab-switch button.active {
+    background: #C4242B;
+    color: white;
+  }
+  
+  /* Form Styling */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container h2 {
+    text-align: center;
+    margin-left: 90px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+
+ .phone-input {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    width: 100%;
+  }
+  
+  .country-code {
+    width: 70px;
+    height: 44px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Phone Number Input */
+  .phone-number {
+    flex: 1;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  
+  /* Buttons */
+  .submit-button {
+    width: 100%;
+    padding: 12px;
+    background: #C4242B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .submit-button:hover {
+    background: #C4242B;
+  }
+  
+ 
+  
+  /* Forgot Password */
+  .forgot-password {
+    text-align: right;
+    font-size: 12px;
+    color: #C4242B;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  /* Close Button */
+  .close-button {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  /* Tab Switch Buttons (Fixed Container) */
+.tab-container {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: left;
+    margin-left: 650px;
+}
+
+.tab-container button {
+    padding: 12px 24px;
+    border: none;
+    background: #f0f0f0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.tab-container button.active {
+    background: #C4242B;
+    color: white;
+}
+
+/* Terms & Conditions Section */
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Checkbox */
+.terms input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #C4242B; /* Change checkbox color */
+}
+
+/* Label */
+.terms label {
+    cursor: pointer;
+}
+
+/* Highlighted Terms & Privacy Policy */
+.terms label span {
+    color: #C4242B;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.terms label span:hover {
+    text-decoration: underline;
+}
+
+/* Switch Form Text */
+.switch-form {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Login Link */
+.switch-form .login-link {
+    color: #C4242B;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.switch-form .login-link:hover {
+    text-decoration: underline;
+}
+
+/* Google Sign-In Button */
+.google-signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Adjust spacing */
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    background: white;
+    font-weight: 600;
+    margin-top: 10px;
+    width: 100%;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Google Logo (Small & Clean) */
+.google-logo {
+    width: 20px;  /* Make the logo smaller */
+    height: 20px;
+    object-fit: contain; /* Ensures it fits properly */
+}
+
+/* Align Text with Logo */
+.google-signin span {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.forgot-password {
+    text-align: right;
+    font-size: 16px;
+    color: #C4242B;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}

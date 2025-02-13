@@ -292,18 +292,28 @@
 
 /* Job Card */
 .job-card {
-    margin-left: 150px;
-    margin-right: 150px;
-    background: #FFFFFF1A;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease;
-    flex-wrap: wrap; /* Ensures responsiveness */
+  width: 80%; /* Adjust width as needed */
+  height: 80px; /* Set a fixed height */
+  margin: 0 auto; /* Centering the card */
+  background: #FFFFFF1A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:15 15px; /* Minimal padding to reduce height */
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  flex-wrap: wrap; /* Ensures responsiveness */
 }
+
+.job-card h3, 
+.job-card p { 
+  margin: 0; /* Remove extra margins */
+  font-size: 14px; /* Adjust font size if needed */
+  text-align: left;
+  margin-left: 20px;
+}
+
 
 .job-card:hover {
     transform: translateY(-3px);
@@ -336,6 +346,8 @@
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease, transform 0.2s ease;
+    align-items: flex-start;
+    margin-right: 20px;
 }
 
 .apply-button:hover {

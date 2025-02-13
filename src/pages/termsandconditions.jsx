@@ -119,7 +119,7 @@ const TermsAndConditions = () => {
       <h2>Contact Information</h2>
       <p>For any legal inquiries, you may contact us at:</p>
 
-      <h3>Exploriaa Inc (US) and Exploriaa Travel Solutions (India)</h3>
+      <h2>Exploriaa Inc (US) and Exploriaa Travel Solutions (India)</h2>
       <p>
         <strong>By Mail:</strong> <br />
         Exploriaa Inc. / Exploriaa Travel Solutions <br />
@@ -127,7 +127,7 @@ const TermsAndConditions = () => {
         RICCO Software Complex, Sitapura, Jaipur, Rajasthan 302022
       </p>
 
-      <h3>Exploriaa FZCO (Dubai)</h3>
+      <h2>Exploriaa FZCO (Dubai)</h2>
       <p>
         <strong>By Mail:</strong> <br />
         Exploriaa FZCO <br />

@@ -203,18 +203,22 @@ body {
     position: relative;
     left: 1000px;
     border: 1px solid #ccc;
-    margin-top: -700px; /* Removed negative margin */
+    margin-top: -920px; /* Removed negative margin */
 }
 
 .inquiry-form h2 {
     font-size: 18px;
     font-weight: 600;
     margin-top: 10px;
-    margin-left: 10px;
-    text-align: left;
     margin-left: 0px;
+    text-align: left;
     line-height: 1.5;
     word-break: break-word;
+    white-space: normal; /* Ensures text wraps correctly */
+    overflow-wrap: break-word; /* Breaks long words */
+    max-width: 100%; /* Ensures it stays within the container */
+    padding: 0 0px; /* Adds slight padding inside the form */
+    box-sizing: border-box;
 }
 
 .inquiry-form .price {
@@ -279,7 +283,7 @@ body {
 }
   
   
-  .destination-routes {
+  .destination-routes-container {
     margin-top: 20px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -287,18 +291,20 @@ body {
     background: #fff;
     width: 50%; /* Set the width to 50% to reduce it */
     max-width: 1000px; /* Optional: limits the maximum width */
-    margin-left: 0; /* No margin on the left */
+    margin-left: 20px; /* No margin on the left */
     margin-right: 0; /* No margin on the right */
     position: relative;
     left: 35%; /* Move the element 50% from the left */
     transform: translateX(-50%); /* Adjust for accurate right alignment */
 }
   
-  .destination-routes h2 {
+  .destination-routes-title {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
     gap:20px;
+    text-align: left;
+    margin-left: 10px;
   }
   
   .destination-dropdown {
@@ -346,11 +352,13 @@ body {
     background: #fff;
     color: #333;
     display: flex;
-    align-items: center;
+    align-items: left;
+    margin-left: 30px;
     justify-content: center;
     min-width: 120px; /* Ensures uniform button size */
     text-align: center;
     min-width: 120px;
+    margin-top: 15px;
   }
   
   /* Selected Tab */
@@ -397,77 +405,38 @@ body {
   }
   
   .trip-highlights {
-    width: 873px;
-    height: 329px;
-    margin-top: 20px;
-    text-align: left; /* Ensures text is left-aligned */
-    padding-left: 250px; /* Keeps bullets in the correct position */
-    
-  }
-  
-  .trip-highlights h2 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: left; /* Ensures heading is left-aligned */
-    margin-left: -270px;
-    
-  }
-  
-  .trip-highlights ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin: 0;
-  }
-  
-  .trip-highlights li {
-    font-size: 16px;
-    color: #444;
-    margin-bottom: 8px;
-    text-align: left; /* Ensures list items are left-aligned */
-    margin-left: 100px;
-  }
-  
-  .trip-highlights {
     width: 766px; /* Hug width */
-    margin-top: 20px;
-    text-align: left;
-  }
-  
-  .trip-highlights h2 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: left;
-  }
-  
-  .trip-highlights ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin: 0;
-  }
-  
-  .trip-highlights li {
-    font-size: 16px;
-    color: #444;
-    margin-bottom: 8px;
-    text-align: left;
-  }
-  
-  .trip-highlights {
     margin: 2rem 0;
     padding: 2rem;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    text-align: left;
+    margin-bottom: 70px;
   }
   
   .trip-highlights h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #333;
     margin-bottom: 1.5rem;
-    text-align: center;
+    margin-left: 150px;
   }
+  
+  .trip-highlights ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  .trip-highlights li {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 8px;
+    margin-left: 150px;
+    text-align: left;
+  }
+  
   
   .trip-days {
     display: grid;
@@ -526,6 +495,7 @@ body {
   .itinerary-box {
     width: 793px; /* Fixed width */
     height: auto; /* Fixed height */
+    font-size: 1rem;
     margin-top: 270px;
     background: #fff;
     padding: 20px 0 0 0; /* Padding as specified */
@@ -537,6 +507,10 @@ body {
     opacity: 1; /* Ensure visibility */
   }
   
+  .itinerary-box h1{
+    font-size: 1.6rem;
+    margin-left: 20px;
+  }
   
   .itinerary-header {
     display: flex;
@@ -1010,6 +984,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .profile-section {
   display: flex;
@@ -1027,6 +1002,7 @@ li {
 .reviewer-name {
   font-size: 18px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 .review-date {
@@ -1096,12 +1072,18 @@ li {
   position: relative;
 }
 
+.view-all-container {
+  position: relative;
+  width: 120px; /* Same as gallery image */
+  height: 100px; /* Same as gallery image */
+}
+
 .view-all-button {
   position: absolute;
   bottom: 50%;
   right: 50%;
-  width: 1000px;
-  height: 1000px;
+  width: 100%;
+  height: 100%;
   display: flex; 
   justify-content: center;
   align-items: center;
@@ -1109,6 +1091,7 @@ li {
   border-radius: 8px;
   cursor: pointer;
   margin-left: 270px;
+  margin-top: 50px;
 }
 
 .view-all-button span {
@@ -1187,15 +1170,18 @@ li {
 /* Section Styling */
 .dropdown-section {
   margin-bottom: 20px;
-  background: #f9f9f9;
+  background: #ffffff;
+  border: #7d7d7d;
   padding: 15px;
   border-radius: 8px;
 }
 
 .dropdown-section h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
+
 
 /* Tourism Links */
 .links {
@@ -1205,13 +1191,13 @@ li {
 
 .links a {
   text-decoration: none;
-  color: #fafafb;
+  color: #666;
   font-size: 14px;
   transition: color 0.3s;
 }
 
 .links a:hover {
-  color: #ffffff;
+  color: #000000;
 }
 
 /* Accordion Styling */

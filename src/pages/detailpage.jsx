@@ -81,8 +81,8 @@ const DetailPage = () => {
             </div>
           </div>
         </div>
-        <div className="destination-routes">
-  <h2>Destination Routes</h2>
+        <div className="destination-routes-container">
+       <h2 className="destination-routes-title">Destination Routes</h2>
 
   {/* Dropdown for Destination */}
   <select className="destination-dropdown">
@@ -93,7 +93,7 @@ const DetailPage = () => {
 </div>
 
 {/* Stay Category Tabs */}
-<h2 style={{ marginTop: "20px", marginLeft: "150px", textAlign: "left" }}>Stay Category</h2>
+<h2 style={{ marginTop: "20px", marginLeft: "170px", textAlign: "left" , fontSize:"20px"}}>Stay Category</h2>
 <div className="stay-category">
     <span className="category selected">Standard</span>
     <span className="category">Deluxe</span>
@@ -127,9 +127,8 @@ const DetailPage = () => {
             <button type="submit" className="submit-btn">Send Enquiry</button>
           </form>
         </div>
-
+        
         <div className="itinerary-summary">
-         
           <div className="itinerary-box">
             <h1>Trip summery</h1>
             <div className="itinerary-header">
@@ -381,10 +380,9 @@ const DetailPage = () => {
         </div>
       </div>
 
-
    <div className="reviewcard-container">
      {/* Header Section */}
-  <div className="reviewcard-header">
+   <div className="reviewcard-header">
     <div className="profile-section">
       <img
         src="https://images.unsplash.com/photo-1522003374706-1ee629dfab6d?q=80&w=2034&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /* Replace with actual profile picture URL */
@@ -460,7 +458,6 @@ const DetailPage = () => {
     </div>
   </div>
 </div>
-
 
 <div className="reviewcard-container">
      {/* Header Section */}
