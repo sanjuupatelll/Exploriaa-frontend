@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Login from "./login";
 import Signin from "./signin";
-import ForgotPassword from "./forgetpassword"; // ✅ Import Forgot Password Component
+import ForgotPassword from "./forgetpassword"; 
+import otpVerification from "./otpverification";
 import "./authmodal.css";
 
 const AuthModal = ({ isOpen, onClose }) => {
-  const [activeTab, setActiveTab] = useState("login"); // 'login', 'signup', or 'forgot'
+  const [activeTab, setActiveTab] = useState("login"); 
+  const [isOtpOpen, setIsOtpOpen] = useState(false); // ✅ Added state for OTP popup
 
   if (!isOpen) return null;
 
@@ -47,6 +49,7 @@ const AuthModal = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
+      {isOtpOpen && <otpverification onClose={() => setIsOtpOpen(false)} />}
     </div>
   );
 };

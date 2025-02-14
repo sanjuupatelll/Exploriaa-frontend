@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; // Import Link from React Router
 import Modal from "react-modal";
 import "./Navbar.css";
 import logo from "../assets/images/logo.svg"; // Import the logo image
@@ -26,7 +27,11 @@ const Navbar = ({ onOpenAuthModal }) => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <img src={logo} alt="Exploriaa Logo" className="logo" /> {/* Logo */}
+        
+        {/* Clickable Logo Redirecting to Home */}
+        <Link to="/">
+          <img src={logo} alt="Exploriaa Logo" className="logo" style={{ cursor: "pointer" }} />
+        </Link>
 
         <div className="search-bar">
           <input type="text" placeholder="Search..." />

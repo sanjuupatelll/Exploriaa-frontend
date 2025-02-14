@@ -17,7 +17,9 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-section logo-social">
           <h1 className="footer-logo">
-            <img src={logo} alt="Logo" width="250" height="auto" />
+          <Link to="/" onClick={scrollToTop}>
+              <img src={logo} alt="Logo" width="250" height="auto" style={{ cursor: "pointer" }} />
+            </Link>
           </h1>
           <div className="social-icons">
             <a href="#"><i className="fab fa-facebook-f"></i></a>
