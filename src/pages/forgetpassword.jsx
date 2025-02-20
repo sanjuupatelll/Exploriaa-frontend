@@ -5,27 +5,30 @@ const ForgotPassword = ({ onBackToLogin }) => {
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const [error, setError] = useState("");
 
-  const handleContinue = () => {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Improved Email Validation Pattern
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
+  const handleContinue = () => {
     if (!email) {
       setError("Please enter your email.");
       return;
     } else if (!emailPattern.test(email)) {
-      setError("Please enter a valid email address.");
+      setError("Please enter a valid email address (e.g., user@example.com).");
       return;
     }
 
-    setError(""); 
+    setError("");
     setShowSuccessPopup(true);
   };
 
   return (
     <>
       {!showSuccessPopup ? (
-        <div className="form-container">
-          <h2>Forgotten Your Password?</h2>
-          <p>Don't worry, we'll send you a message to help you reset your password.</p>
+        <div className="forgot-password-container">
+          <div className="form-title">Forgotten Your Password?</div>
+          <div className="form-description">
+            Don't worry, we'll send you a message to help you reset your password.
+          </div>
 
           <input
             type="email"
@@ -34,34 +37,33 @@ const ForgotPassword = ({ onBackToLogin }) => {
             onChange={(e) => setEmail(e.target.value)}
             className="input-field"
           />
-          
-          {/* Show error message if email is invalid */}
-          {error && <p className="error-message">{error}</p>}
+
+          {error && <div className="error-message">{error}</div>}
 
           <button className="submit-button" onClick={handleContinue}>
             Continue
           </button>
 
-          <p className="back-to-login" onClick={onBackToLogin}>
+          <div className="back-to-login" onClick={onBackToLogin}>
             Return to <span>Log In</span>
-          </p>
+          </div>
         </div>
       ) : (
-        // Success Popup after clicking "Continue"
-        <div className="form-container">
-          <h2>You're Almost There!</h2>
-          <p>
-            We've sent you an email to help you reset your password. Check your spam inbox if you can't find it.
-          </p>
+        <div className="reset-password-box">
+  <div className="form-title">You're Almost There!</div>
+  <div className="form-description">
+    We've sent you an email to help you reset your password. Check your spam inbox if you can't find it.
+  </div>
 
-          <button className="submit-button" onClick={onBackToLogin}>
-            Done
-          </button>
+  <button className="submit-button" onClick={onBackToLogin}>
+    Done
+  </button>
 
-          <p className="back-to-login" onClick={onBackToLogin}>
-            Return to <span>Log In</span>
-          </p>
-        </div>
+  <div className="back-to-login" onClick={onBackToLogin}>
+    Return to <span>Log In</span>
+  </div>
+</div>
+
       )}
     </>
   );

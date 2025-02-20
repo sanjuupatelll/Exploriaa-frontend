@@ -1,338 +1,5 @@
 /* Modal Overlay */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  /* Modal Container */
-  .modal-container {
-    background: white;
-    width: 1000px;
-    height: 600px; /* Square Shape */
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Modal Content - Two Sections */
-  .modal-content {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-  }
-  
-  /* Left Side - Image */
-  .modal-image {
-    width: 50%;
-    background-color: #eee;
-  }
-  
-  .modal-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  
-/* Right Side - Form */
-.modal-form {
-    width: 50%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  /* Tab Switch Buttons */
-  .tab-switch {
-    display: flex;
-    justify-content: start;
-   
-  }
-  
-  .tab-switch button {
-   
-    padding: 12px 24px;
-    border: none;
-    background: #f0f0f0;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 5px;
-    margin-right: 10px;
-  }
-  
-  .tab-switch button.active {
-    background: #C4242B;
-    color: white;
-  }
-  
-  /* Form Styling */
-  .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center all items horizontally */
-    text-align: center; /* Center text inside */
-    width: 100%;
-  }
-  
-  .form-container h2 {
-    font-size: 24px;
-    margin-left: 60px;
-    font-weight: bold;
-    text-align: center; /* Ensure text is centered */
-  }
-  
-  
-  .input-field {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-
-
- .phone-input {
-    display: flex;
-    align-items: center;
-    gap: 8px; 
-    width: 100%;
-  }
-  
-  .country-code {
-    width: 70px;
-    height: 44px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-    background: white;
-    cursor: pointer;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  /* Phone Number Input */
-  .phone-number {
-    flex: 1;
-    height: 44px;
-    padding: 0 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-top: 5px;
-  }
-  
-  
-  /* Buttons */
-  .submit-button {
-    width: 100%;
-    padding: 12px;
-    background: #C4242B;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .submit-button:hover {
-    background: #C4242B;
-  }
-  
- 
-  
-  /* Forgot Password */
-  .forgot-password {
-    text-align: right;
-    font-size: 12px;
-    color: #C4242B;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  
-  .forgot-password:hover {
-    text-decoration: underline;
-  }
-  
-  /* Close Button */
-  .close-button {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  /* Tab Switch Buttons (Fixed Container) */
-.tab-container {
-    display: flex;
-    gap: 10px;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: left;
-    margin-left: 650px;
-}
-
-.tab-container button {
-    padding: 12px 24px;
-    border: none;
-    background: #f0f0f0;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.tab-container button.active {
-    background: #C4242B;
-    color: white;
-}
-
-/* Terms & Conditions Section */
-.terms {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    color: #333;
-    margin-top: 15px;
-}
-
-/* Checkbox */
-.terms input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-    accent-color: #C4242B; /* Change checkbox color */
-}
-
-/* Label */
-.terms label {
-    cursor: pointer;
-}
-
-/* Highlighted Terms & Privacy Policy */
-.terms label span {
-    color: #C4242B;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.terms label span:hover {
-    text-decoration: underline;
-}
-
-/* Switch Form Text */
-.switch-form {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 10px;
-    color: #555;
-}
-
-/* Login Link */
-.switch-form .login-link {
-    color: #C4242B;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.switch-form .login-link:hover {
-    text-decoration: underline;
-}
-
-/* Google Sign-In Button */
-.google-signin {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px; /* Adjust spacing */
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-    background: white;
-    font-weight: 600;
-    margin-top: 10px;
-    width: 100%;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Google Logo (Small & Clean) */
-.google-logo {
-    width: 20px;  /* Make the logo smaller */
-    height: 20px;
-    object-fit: contain; /* Ensures it fits properly */
-}
-
-/* Align Text with Logo */
-.google-signin span {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-}
-
-.forgot-password {
-    text-align: center;
-    font-size: 16px;
-    color: #C4242B;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.forgot-password:hover {
-    text-decoration: underline;
-}
-
-.back-to-login {
-  cursor: pointer;
-  font-size: 14px;
-  color: #555;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.back-to-login span {
-  color: #C4242B; /* Blue color */
-  font-weight: bold;
-  text-decoration: underline;
-  transition: color 0.3s ease;
-}
-
-.back-to-login span:hover {
-  color: #C4242B; /* Darker blue on hover */
-}
-
-.error-message {
-  color: #C4242B;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-/* === OTP Popup Styles (Scoped) === */
-.otp-popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -344,56 +11,501 @@
   align-items: center;
   z-index: 1000;
 }
-
-.otp-popup-container {
+ 
+/* Modal Container */
+.modal-container {
   background: white;
-  padding: 30px;
-  width: 400px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.otp-inputs {
+  width: 1000px;
+  height: 600px; /* Square Shape */
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.otp-box {
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  font-size: 18px;
+/* Modal Content - Two Sections */
+.modal-content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+/* Left Side - Image */
+.modal-image {
+  width: 50%;
+  background-color: #eee;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Right Side - Form */
+.modal-form {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Tab Switch Buttons */
+.tab-switch {
+  display: flex;
+  justify-content: start;
+ 
+}
+
+.tab-switch button {
+ 
+  padding: 12px 24px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.tab-switch button.active {
+  background: #C4242B;
+  color: white;
+}
+
+/* Form Styling */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center all items horizontally */
+  text-align: center; /* Center text inside */
+  width: 100%;
+}
+
+.form-container h2 {
+  font-size: 24px;
+  margin-left: 60px;
+  font-weight: bold;
+  text-align: center; /* Ensure text is centered */
+}
+
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  font-size: 14px;
 }
 
-.otp-submit-button {
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
   width: 100%;
-  background: red;
+}
+
+.country-code {
+  width: 70px;
+  height: 44px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Phone Number Input */
+.phone-number {
+  flex: 1;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+/* Buttons */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background: #C4242B;
   color: white;
   border: none;
-  padding: 10px;
-  margin-top: 10px;
   border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background: #C4242B;
+}
+
+
+
+/* Forgot Password */
+.forgot-password {
+  text-align: right;
+  font-size: 12px;
+  color: #C4242B;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 
-.otp-close-button {
-  width: 100%;
-  background: grey;
-  color: white;
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  background: none;
   border: none;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
+  font-size: 24px;
   cursor: pointer;
 }
+
+/* Tab Switch Buttons (Fixed Container) */
+.tab-container {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: left;
+  margin-left: 650px;
+}
+
+.tab-container button {
+  padding: 12px 24px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.tab-container button.active {
+  background: #C4242B;
+  color: white;
+}
+
+/* Terms & Conditions Section */
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+  margin-top: 15px;
+}
+
+/* Checkbox */
+.terms input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #C4242B; /* Change checkbox color */
+}
+
+/* Label */
+.terms label {
+  cursor: pointer;
+}
+
+/* Highlighted Terms & Privacy Policy */
+.terms label span {
+  color: #C4242B;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.terms label span:hover {
+  text-decoration: underline;
+}
+
+/* Switch Form Text */
+.switch-form {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Login Link */
+.switch-form .login-link {
+  color: #C4242B;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.switch-form .login-link:hover {
+  text-decoration: underline;
+}
+
+/* Google Sign-In Button */
+.google-signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Adjust spacing */
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  background: white;
+  font-weight: 600;
+  margin-top: 10px;
+  width: 100%;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Google Logo (Small & Clean) */
+.google-logo {
+  width: 20px;  /* Make the logo smaller */
+  height: 20px;
+  object-fit: contain; /* Ensures it fits properly */
+}
+
+/* Align Text with Logo */
+.google-signin span {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+
+
+/* === OTP Styles (Scoped) === */
+/* Instruction text */
+.otp-instruction {
+font-size: 14px;
+color: #555;
+text-align: center;
+margin-bottom: 15px;
+max-width: 80%;
+}
+
+/* OTP input fields container */
+.otp-container {
+display: flex;
+justify-content: center;
+gap: 10px;
+margin: 20px 0;
+}
+
+.otp-input {
+width: 50px;
+height: 50px;
+text-align: center;
+font-size: 18px;
+border: 2px solid #ddd;
+border-radius: 10px;
+background: #f8f8f8;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+outline: none;
+transition: all 0.2s ease-in-out;
+}
+
+.otp-input:focus {
+border-color: #d32f2f;
+background: #fff;
+box-shadow: 0 2px 8px rgba(211, 47, 47, 0.4);
+}
+
+/* Verify button */
+.submit-button {
+width: 320px;
+background: #C4242B;
+color: white;
+font-size: 18px;
+padding: 12px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-weight: bold;
+margin-top: 10px;
+transition: background 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.submit-button:hover {
+background: #b71c1c;
+}
+
+.otp-header {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.otp-text {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
 
 /* === Ensure this does NOT affect login/signup pages === */
 .form-container, .input-field, .submit-button {
-  /* Keep your existing styles for login/signup */
+/* Keep your existing styles for login/signup */
+}
+
+/* Forgot Password Container */
+.forgot-password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  padding: 40px;
+}
+
+/* Title */
+.forgot-password-container .form-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-right: 30px;
+}
+
+/* Description */
+.forgot-password-container .form-description {
+  font-size: 10px;
+  color: #555;
+  margin-bottom: 20px;
+  max-width: 80%;
+  margin-right: 100px;
+}
+
+/* Input Field */
+.forgot-password-container .input-field {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Error Message */
+.forgot-password-container .error-message {
+  color: #C4242B;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Submit Button */
+.forgot-password-container .submit-button {
+  width: 100%;
+  padding: 12px;
+  background: #C4242B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+.forgot-password-container .submit-button:hover {
+  background: #b71c1c;
+}
+
+/* Back to Login */
+.forgot-password-container .back-to-login {
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.forgot-password-container .back-to-login span {
+  color: #C4242B;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-container .back-to-login span:hover {
+  color: #b71c1c;
+}
+
+.reset-password-box {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: auto;
+}
+
+.reset-password-box .form-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.reset-password-box .form-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.reset-password-box .submit-button {
+  width: 100%;
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.reset-password-box .submit-button:hover {
+  background-color: #b71c1c;
+}
+
+.reset-password-box .back-to-login {
+  font-size: 14px;
+  color: #555;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.reset-password-box .back-to-login span {
+  color: #d32f2f;
+  font-weight: bold;
 }
 
