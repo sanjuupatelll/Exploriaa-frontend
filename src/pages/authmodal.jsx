@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Login from "./login";
 import Signin from "./signin";
 import ForgotPassword from "./forgetpassword"; 
-import otpVerification from "./otpverification";
+import OtpVerification from "./otpverification"; // ✅ Correct import
 import "./authmodal.css";
 
 const AuthModal = ({ isOpen, onClose }) => {
   const [activeTab, setActiveTab] = useState("login"); 
-  const [isOtpOpen, setIsOtpOpen] = useState(false); // ✅ Added state for OTP popup
+  const [isOtpOpen, setIsOtpOpen] = useState(false); // ✅ OTP Modal State
 
   if (!isOpen) return null;
 
@@ -43,13 +43,15 @@ const AuthModal = ({ isOpen, onClose }) => {
             {/* Conditionally Render Forms */}
             <div className="auth-form">
               {activeTab === "login" && <Login onForgotPassword={() => setActiveTab("forgot")} />}
-              {activeTab === "signup" && <Signin setIsLogin={() => setActiveTab("login")} />}
+              {activeTab === "signup" && <Signin setIsLogin={() => setActiveTab("login")} onSignUp={() => setIsOtpOpen(true)} />}
               {activeTab === "forgot" && <ForgotPassword onBackToLogin={() => setActiveTab("login")} />}
             </div>
           </div>
         </div>
       </div>
-      {isOtpOpen && <otpverification onClose={() => setIsOtpOpen(false)} />}
+
+      {/* OTP Verification Modal */}
+      {isOtpOpen && <OtpVerification onClose={() => setIsOtpOpen(false)} />}
     </div>
   );
 };
