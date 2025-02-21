@@ -13,6 +13,7 @@ import Policy from "./pages/policy";
 import Support from "./pages/support";
 import PartnerWithUs from "./pages/partnerwithus";
 import AuthModal from "./pages/authmodal";
+import ViewAllImages from "./pages/viewallimages";
 
 function App() {
   const [isAuthModalOpen, setAuthModalOpen] = useState(false);
@@ -29,6 +30,8 @@ function App() {
         <Routes>
           <Route path="/" element={<><Banner /><Homepage /></>} />
           <Route path="/detailpage" element={<DetailPage />} />
+          <Route path="/" element={<><Banner /><DetailPage /></>} />
+          <Route path="/viewallimages" element={<ViewAllImages />} />
           <Route path="/about" element={<About />} />
           <Route path="/wehiring" element={<WeHiring />} />
           <Route path="/applyjob" element={<ApplyJob />} />
@@ -37,7 +40,6 @@ function App() {
           <Route path="/support" element={<Support />} />
           <Route path="/partnerwithus" element={<PartnerWithUs />} />
         </Routes>
-
         <Footer />
       </div>
     </Router>

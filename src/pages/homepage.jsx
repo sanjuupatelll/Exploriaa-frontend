@@ -2,9 +2,11 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from "react-router-dom";
 import "./homepage.css";
 
 const Homepage = () => {
+  const navigate = useNavigate();
   const cardSliderSettings = {
     dots: false,
     infinite: true,
@@ -311,8 +313,6 @@ const Homepage = () => {
           <div className="country-name-container">
             <h2>{countryData.country}</h2>
           </div>
-          
-  
           {/* Cards Container */}
           <div className="layout-container">
             {countryData.cards.map((card, cardIndex) => (
@@ -337,7 +337,7 @@ const Homepage = () => {
                    
                     <div className="card-buttons" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '10px', marginTop: '20px' }}>
                      <button 
-                      className="btn btn-info" 
+                      className="btn btn-info" onClick={() => navigate("/detailpage")}
                         style={{ padding: '10px 20px', fontSize: '14px', backgroundColor: '#C4242B', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', transition: 'background-color 0.3s ease', gap: '50px' }}
                           onMouseOver={(e) => e.target.style.backgroundColor = '#9a1f1b'}
                           onMouseOut={(e) => e.target.style.backgroundColor = '#C4242B'}>

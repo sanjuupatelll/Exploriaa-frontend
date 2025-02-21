@@ -6,11 +6,39 @@ import Frame1 from "../assets/images/Frame1.png";
 import Frame2 from "../assets/images/Frame2.png";
 import Frame3 from "../assets/images/Frame3.png";
 import Frame4 from "../assets/images/Frame4.png";
+import { useNavigate } from "react-router-dom";
 import "./detailpage.css";
+
+
 const DetailPage = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [openSections, setOpenSections] = useState({});
+  const [selectedCategory, setSelectedCategory] = useState("Standard");
 
+  const tripDetails = {
+    Standard: [
+      "Explore Dubai, a city of towering skyscrapers, vibrant souks, and a rich tapestry of global cultures.",
+      "Admire the breathtaking panoramic views of Dubai's skyline from the 124th and 125th floors of the Burj Khalifa, the world's tallest building.",
+      "Venture into the heart of the Dubai Arabian desert and experience adrenaline-pumping dune bashing, camel rides, and traditional entertainment.",
+      "Sail aboard a luxurious Dubai Marina yacht and admire the surrounding architectural marvels and towering skyscrapers.",
+      "Discover the six captivating zones of IMG Worlds of Adventure, the largest indoor-themed entertainment destination."
+    ],
+    Deluxe: [
+      "Experience the magic of Dubai under the starlit desert sky, with luxurious dinners and breathtaking views.",
+      "Ascend to one of the most stunning buildings in Dubai and the world's tallest building, Burj Khalifa, and enjoy the views from the 124th floor.",
+      "Spend quality time on the traditional Dhow Marina Cruise, savoring a delicious dinner while admiring the city skyline.",
+      "Experience the thrill of dune bashing in Dubai's vast desert against the backdrop of golden landscapes.",
+      "Enjoy the famous Tanoura Dance Show, performed by skilled artists in colorful skirts to rhythmic music."
+    ],
+    Luxury: [
+      "Explore Dubai’s cutting-edge architectural wonders and marvel at the city’s skyline of skyscrapers and futuristic design.",
+      "Sail along Dubai Marina aboard a traditional dhow cruise, enjoying views of the city’s iconic marvels while savoring a delicious dinner.",
+      "Learn about Dubai’s rich history at the Dubai Museum, exploring exhibits that showcase the city’s transformation.",
+      "Indulge in a desert safari adventure, including dune bashing, camel riding, and a traditional Bedouin-style camp experience.",
+      "Stay at the iconic Atlantis The Palm resort, offering luxurious accommodations and access to the thrilling Aquaventure Waterpark."
+    ]
+  };
 
   const toggleSection = (division, index) => {
     setOpenSections((prev) => ({
@@ -57,6 +85,10 @@ const DetailPage = () => {
               src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=500"
               alt="Desert Safari"
             />
+            <button className="view-all-btn" onClick={() => navigate("/viewallimages")}>
+        <span className="icon"></span> View All Images
+      </button>
+
           </div>
         </div>
       </div>
@@ -82,34 +114,40 @@ const DetailPage = () => {
           </div>
         </div>
         <div className="destination-routes-container">
-       <h2 className="destination-routes-title">Destination Routes</h2>
-
-  {/* Dropdown for Destination */}
-  <select className="destination-dropdown">
-    <option value="Dubai" selected>Dubai</option>
-    <option value="Abu Dhabi">Abu Dhabi</option>
-    <option value="Sharjah">Sharjah</option>
-  </select>
-</div>
+      <h2 className="destination-routes-title">Destination Routes</h2>
+      <div className="destination-routes-box">
+        <span>Dubai</span>
+        <span className="arrow">→</span>
+        <span>Abu Dhabi</span>
+        <span className="arrow">→</span>
+        <span>Abu Dhabi</span>
+      </div>
+    </div>
 
 {/* Stay Category Tabs */}
 <h2 style={{ marginTop: "20px", marginLeft: "170px", textAlign: "left" , fontSize:"20px"}}>Stay Category</h2>
-<div className="stay-category">
-    <span className="category selected">Standard</span>
-    <span className="category">Deluxe</span>
-    <span className="category">Luxury</span>
-  </div>
-  {/* Trip Highlights Section */}
-  <div className="trip-highlights">
-    <h2>Trip Highlights</h2>
-    <ul>
-      <li>Explore Dubai, a city of towering skyscrapers, vibrant souks, and a rich tapestry of global cultures.</li>
-      <li>Admire the breathtaking panoramic views of Dubai's skyline from the 124th and 125th floors of the Burj Khalifa, the world's tallest building.</li>
-      <li>Venture into the heart of the Dubai Arabian desert and experience adrenaline-pumping dune bashing, camel rides, and traditional entertainment.</li>
-      <li>Sail aboard a luxurious Dubai Marina yacht and admire the surrounding architectural marvels and towering skyscrapers.</li>
-      <li>Discover the six captivating zones of IMG Worlds of Adventure, the largest indoor-themed entertainment destination.</li>
-    </ul>
-  </div>
+<div className="detail-container">
+      <div className="stay-category">
+        {["Standard", "Deluxe", "Luxury"].map((category) => (
+          <span
+            key={category}
+            className={`category ${selectedCategory === category ? "selected" : ""}`}
+            onClick={() => setSelectedCategory(category)} >
+            {category}
+          </span>
+        ))}
+      </div>
+
+      {/* Trip Highlights Section */}
+      <div className="trip-highlights">
+        <h2>Trip Highlights</h2>
+        <ul>
+          {tripDetails[selectedCategory].map((highlight, index) => (
+            <li key={index}>{highlight}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
 </div>
         {/* Inquiry Form on the Right Side */}
         <div className="inquiry-form">

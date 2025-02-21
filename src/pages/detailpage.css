@@ -286,7 +286,7 @@ body {
   .destination-routes-container {
     margin-top: 20px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #ffffff;
     border-radius: 8px;
     background: #fff;
     width: 50%; /* Set the width to 50% to reduce it */
@@ -307,20 +307,25 @@ body {
     margin-left: 10px;
   }
   
-  .destination-dropdown {
-    width: 100%;
+  .destination-routes-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #cc0000;
     border-radius: 8px;
-    background: #ffeeee;
-    color: #cc0000;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 50;
+    width: 100%;
   }
   
-  .destination-dropdown:focus {
-    outline: none;
-    border-color: #e60000;
-    box-shadow: 0 0 5px rgba(230, 0, 0, 0.5);
+  .destination-routes-box span {
+    margin: 0 8px;
+  }
+  
+  .arrow {
+    color: black;
+    font-size: 18px;
   }
   
  /* Stay Category Container */
@@ -361,18 +366,6 @@ body {
     margin-top: 15px;
   }
   
-  /* Selected Tab */
-  .category.selected {
-    background-color: #C4242B;
-    color: #fff;
-    border-color: #e60000;
-  }
-  
-  /* Hover Effect */
-  .category:hover {
-    background-color: #9c2525;
-  }
-  
   .stay-category-wrapper {
     width: 873px;
     height: 329px;
@@ -382,23 +375,20 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0px; /* No gap between elements */
-    opacity: 1; /* Ensure it's visible */
+    opacity: 1; 
   }
   
   .stay-category {
     display: flex;
-    gap: 10px; /* Space between category buttons */
-  }
-  
-  .category {
-    padding: 10px 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: #fff;
+    gap: 10px; 
   }
   
   .category.selected {
+    border: 2px solid #cc0000;
+    background-color: #ffeeee;
+    color: #cc0000;
+  }
+  .category:hover {
     border: 2px solid #cc0000;
     background-color: #ffeeee;
     color: #cc0000;
@@ -413,6 +403,7 @@ body {
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
     text-align: left;
     margin-bottom: 70px;
+    margin-top: -40px;
   }
   
   .trip-highlights h2 {
@@ -1234,17 +1225,26 @@ li {
   transform: rotate(180deg);
 }
 
-/* Accordion Content */
-.accordion-content {
-  background: #ffffff;
-  padding: 15px;
-  font-size: 14px;
-  display: none;
-  border-left: 2px solid #ffffff;
-  border-radius: 5px;
+.view-all-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: right;
+  margin-left: 530px;
+  gap: 5px;
+  margin-bottom: 200px;
+
 }
 
-.accordion-content.show {
-  display: block;
+.view-all-btn:hover {
+  background: #e3e1e1;
 }
-

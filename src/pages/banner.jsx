@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./banner.css";
 
 const DynamicBanner = () => {
@@ -12,32 +12,43 @@ const DynamicBanner = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
-    }, 5000);
+  const handleNext = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setTimeout(() => setIsAnimating(false), 600);
 
-    return () => clearInterval(interval);
-  }, [banners.length]);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
+  };
+
+  const handlePrev = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setTimeout(() => setIsAnimating(false), 600);
+
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + banners.length) % banners.length);
+  };
 
   return (
-    <div
-      className="dynamic-banner slide"
-      style={{
-        backgroundImage: `url(${banners[currentIndex]})`
-      }}
-    >
-      <div className="banner-content">
-        {/* Add banner content here if needed */}
+    <div className="banner-container">
+      <div className="image-wrapper">
+        <img
+          src={banners[currentIndex]}
+          alt={`Slide ${currentIndex + 1}`}
+          className="slide-image"
+        />
       </div>
 
-      {/* Dots Below the Banner */}
+      <button className="nav-button left" onClick={handlePrev}>&#10094;</button>
+      <button className="nav-button right" onClick={handleNext}>&#10095;</button>
+
       <div className="dots-container">
         {banners.map((_, index) => (
           <div
             key={index}
             className={`dot ${index === currentIndex ? "active" : ""}`}
+            onClick={() => setCurrentIndex(index)}
           ></div>
         ))}
       </div>

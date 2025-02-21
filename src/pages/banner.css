@@ -1,76 +1,74 @@
-.dynamic-banner {
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    width: 100%;
-    max-width: 1350px;
-    margin: 20px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    transition: background-position 1s ease-in-out; /* Transition for sliding effect */
-  }
-  
-  /* Add class for the sliding effect */
-  .dynamic-banner.slide {
-    animation: slideRight 15s ease-in-out infinite; /* Slide right animation */
-  }
-  
-  /* Define the keyframes for the sliding effect from right to left */
-  @keyframes slideRight {
-    0% {
-      background-position: 100% center; /* Start from right side */
-    }
-    50% {
-      background-position: 0 center; /* Move to center */
-    }
-    100% {
-      background-position: -100% center; /* Move to left side */
-    }
-  }
-  
-  /* Dots Container */
-  .dots-container {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* Space between dots */
-  }
-  
-  /* Individual Dot Styling */
-  .dot {
-    width: 8px;
-    height: 8px;
-    background-color: rgba(255, 255, 255, 0.7); /* Light dots */
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Active Dot */
-  .dot.active {
-    background-color: white; /* Active dot will be white */
-  }
-  
-  /* Dot hover effect */
-  .dot:hover {
-    background-color: rgba(255, 255, 255, 1); /* Slight highlight on hover */
-  }
-  
-  .banner-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .banner-content h2 {
-    font-size: 2rem;
-  }
-  
+.banner-container {
+  position: relative;
+  width: 100%;
+  max-width: 1350px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider-wrapper {
+  display: flex;
+  width: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Navigation Buttons */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-button.left {
+  left: 10px;
+}
+
+.nav-button.right {
+  right: 10px;
+}
+
+.nav-button:hover {
+  background: transparent;
+}
+
+/* Dots Container */
+.dots-container {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+/* Individual Dot */
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: white;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
