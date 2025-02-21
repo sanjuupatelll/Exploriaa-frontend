@@ -86,8 +86,8 @@ const DetailPage = () => {
               alt="Desert Safari"
             />
             <button className="view-all-btn" onClick={() => navigate("/viewallimages")}>
-        <span className="icon"></span> View All Images
-      </button>
+          <span className="icon"></span> View All Images
+          </button>
 
           </div>
         </div>

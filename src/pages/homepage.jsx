@@ -344,7 +344,7 @@ const Homepage = () => {
                           View Pack
                           </button>
                       <button 
-                      className="btn btn-book" 
+                      className="btn btn-book" onClick={() => navigate("/BookingPage")} 
                       style={{ padding: '10px 20px', fontSize: '14px', backgroundColor: '#C4242B', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', transition: 'background-color 0.3s ease', gap: '50px' }}
                       onMouseOver={(e) => e.target.style.backgroundColor = '#9a1f1b'}
                       onMouseOut={(e) => e.target.style.backgroundColor = '#C4242B'}>

@@ -14,6 +14,7 @@ import Support from "./pages/support";
 import PartnerWithUs from "./pages/partnerwithus";
 import AuthModal from "./pages/authmodal";
 import ViewAllImages from "./pages/viewallimages";
+import BookingPage from "./pages/BookingPage";
 
 function App() {
   const [isAuthModalOpen, setAuthModalOpen] = useState(false);
@@ -39,6 +40,7 @@ function App() {
           <Route path="/policy" element={<Policy />} />
           <Route path="/support" element={<Support />} />
           <Route path="/partnerwithus" element={<PartnerWithUs />} />
+          <Route path="/bookingpage" element={<BookingPage />} />
         </Routes>
         <Footer />
       </div>
