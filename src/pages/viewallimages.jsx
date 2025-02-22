@@ -75,7 +75,7 @@ const allImages = [
     };
   
     return (
-      <div className="viewall-container">
+      <div className="va-container">
         {/* Back Button */}
         <div className="back-button-container" onClick={() => navigate(-1)}>
         <IoArrowBack className="back-icon" />
@@ -94,9 +94,6 @@ const allImages = [
             </span>
           ))}
         </div>
-  
-        
-  
         {/* Image Grid */}
         <div className="image-grid">
           {imagesMap[activeTab].map((src, index) => (
