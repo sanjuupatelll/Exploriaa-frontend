@@ -14,8 +14,8 @@ h1 {
    
 }
 
-h4 {
-    color: #d32f2f;
+.book h4 {
+    color: #d62b2b;
     font-size: 18px;
     border-bottom: 2px solid #d32f2f;
     padding-bottom: 5px;
@@ -233,7 +233,7 @@ input, select {
     transition: border-color 0.3s ease-in-out;
   }
   
-  .otp-input:focus {
+  .ot-input:focus {
     border-color: #007bff;
   }
   

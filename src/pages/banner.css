@@ -1,10 +1,12 @@
 .banner-container {
   position: relative;
-  width: 100%;
+  width: 1230px;
   max-width: 1350px;
   margin: 20px auto;
   overflow: hidden;
   border-radius: 10px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
 .slider-wrapper {

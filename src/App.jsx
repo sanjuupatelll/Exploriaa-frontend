@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./pages/Navbar";
+import StickyBar from "./pages/stickybar"; // Import StickyStoryBar
 import Homepage from "./pages/homepage";
 import Banner from "./pages/banner";
 import Footer from "./pages/footer";
@@ -18,20 +19,17 @@ import BookingPage from "./pages/BookingPage";
 
 function App() {
   const [isAuthModalOpen, setAuthModalOpen] = useState(false);
-
   return (
     <Router>
       <div className="App">
-        {/* Pass modal state control to Navbar */}
+        {/* Navbar with modal control */}
         <Navbar onOpenAuthModal={() => setAuthModalOpen(true)} />
-
         {/* Auth Modal */}
         {isAuthModalOpen && <AuthModal isOpen={isAuthModalOpen} onClose={() => setAuthModalOpen(false)} />}
-
         <Routes>
-          <Route path="/" element={<><Banner /><Homepage /></>} />
+          <Route path="/" element={<><StickyBar /><Banner /><Homepage /></>} />
+          <Route path="/" element={<><Homepage /></>} />
           <Route path="/detailpage" element={<DetailPage />} />
-          <Route path="/" element={<><Banner /><DetailPage /></>} />
           <Route path="/viewallimages" element={<ViewAllImages />} />
           <Route path="/about" element={<About />} />
           <Route path="/wehiring" element={<WeHiring />} />
@@ -42,6 +40,8 @@ function App() {
           <Route path="/partnerwithus" element={<PartnerWithUs />} />
           <Route path="/bookingpage" element={<BookingPage />} />
         </Routes>
+
+        {/* Footer */}
         <Footer />
       </div>
     </Router>

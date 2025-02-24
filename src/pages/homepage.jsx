@@ -334,7 +334,6 @@ const Homepage = () => {
                   </div>
                     <h3>{card.title}</h3>
                     <p className="price">{card.price} <span>{card.discount}</span></p>
-                   
                     <div className="card-buttons" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '10px', marginTop: '20px' }}>
                      <button 
                       className="btn btn-info" onClick={() => navigate("/detailpage")}
@@ -351,7 +350,6 @@ const Homepage = () => {
                           Book Now
                        </button>
                      </div>
-
                   </div>
                 </div>
               </div>

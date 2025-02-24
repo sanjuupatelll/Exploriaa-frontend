@@ -112,7 +112,7 @@ const BookingPage = ({ packageDetails }) => {
     <div className="booking-container">
       <h1>Book Your Tour</h1>
 
-      <h4>Traveler Information</h4>
+     <div className="book"> <h4>Traveler Information</h4> </div>
       <label>Full Name</label>
       <input type="text" name="fullName" value={bookingDetails.fullName} onChange={handleInputChange} required />
       <label>Email</label>
@@ -124,7 +124,7 @@ const BookingPage = ({ packageDetails }) => {
       <label>Number of Children</label>
       <input type="number" name="numberOfChildren" value={bookingDetails.numberOfChildren} onChange={handleInputChange} min="0" />
 
-      <h4>Tour Details</h4>
+      <div className="book">  <h4>Tour Details</h4> </div>
       <label>Tour Name</label>
       <input type="text" name="tourName" value={bookingDetails.tourName} onChange={handleInputChange} required />
       <label>Destination</label>
@@ -134,12 +134,12 @@ const BookingPage = ({ packageDetails }) => {
       <label>End Date</label>
       <DatePicker selected={bookingDetails.endDate} onChange={(date) => setBookingDetails({ ...bookingDetails, endDate: date })} dateFormat="dd-MM-yyyy" className="date-picker" />
 
-      <h4>Pricing </h4>
+      <div className="book">  <h4>Pricing </h4> </div>
       <p>Price: ₹{bookingDetails.price}</p>
       <p>Discount: ₹{bookingDetails.discount}</p>
       <p>Total Price: ₹{bookingDetails.totalPrice}</p>
 
-      <h4>Payment</h4>
+      <div className="book">  <h4>Payment</h4> </div>
       <label>Payment Method</label>
       <select name="paymentMethod" value={bookingDetails.paymentMethod} onChange={handlePaymentMethodChange}>
         <option value="">Select Payment Method</option>
@@ -194,7 +194,7 @@ const BookingPage = ({ packageDetails }) => {
     <h3>Authorization transaction code</h3>
     <p>We sent a 6-digit OTP to 01***0000</p>
 
-    <div className="otp-input-container">
+    <div className="ot-input-container">
       <input type="text" className="otp-input" placeholder="OTP" value={otp} onChange={handleOTPChange} />
       <button className="resend-btn">Resend</button>
     </div>

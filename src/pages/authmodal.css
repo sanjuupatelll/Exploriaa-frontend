@@ -307,7 +307,7 @@ max-width: 80%;
 }
 
 /* OTP input fields container */
-.otp-container {
+.otp-cont {
 display: flex;
 justify-content: center;
 gap: 10px;

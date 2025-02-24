@@ -81,7 +81,7 @@ const SignupForm = ({ setIsLogin }) => {
             We've sent an OTP to your email. Enter it below:
           </p>
 
-          <div className="otp-container">
+          <div className="otp-cont">
             {otp.map((value, index) => (
               <input
                 key={index}

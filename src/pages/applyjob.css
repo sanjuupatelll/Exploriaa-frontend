@@ -206,7 +206,7 @@
 .bullet-list {
   list-style-type: disc !important; /* Forces bullet points */
   padding-left: 20px !important; /* Indents bullets properly */
-  margin-left: 20px !important; /* Ensures bullets are visible */
+  margin-left: 20px !important; 
 }
 
 /* Ensure list items are spaced and styled */
