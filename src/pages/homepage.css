@@ -1,11 +1,10 @@
-/* Grid layout for 4 cards in a single row */
 .layout-container {
   top: 50px;
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 cards in a row */
-  gap: 5px; /* Reduced space between cards */
+  gap: 5px; 
   margin: 20px auto;
-  max-width: 1350px; /* Limit overall width */
+  max-width: 1350px; 
   padding: 30px;
   justify-content: center;
   background-color: #fafafa;
@@ -21,98 +20,103 @@
 .card {
   position: relative;
   text-align: left;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Fixed RGBA format */
   border-radius: 8px;
   overflow: hidden;
-  max-width: 300px; /* Adjust card width */
+  max-width: 300px; 
   background-color: #ffffff;
   margin-top: 25px;
-  display: flex; /* Ensure flex container */
+  display: flex; 
   flex-direction: column;
 }
 
 /* Image slider styling */
-.image-slider {
+.img-slider {
   width: 100%;
-  height: 150px; /* Adjust height */
+  height: 300px;
   overflow: hidden;
   border-radius: 8px;
+  position: relative;
 }
-
 /* Image styling inside the slider */
-.image-slide img {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  max-height: 150px; /* Prevent images from exceeding the container */
-  object-fit: cover;
+.img-slide img {
+  height: 100%;
+  object-fit:cover;
   border-radius: 8px;
 }
-
 
 /* Card content */
 .card-content {
-  padding: 10px;
+  padding: 8px;
+  margin-top: px;
   background-color: #fff;
   flex-grow: 1;
 }
-
-.card-content h3 {
-  font-size: 16px;
-  margin: 5px 0;
-  font-weight: bold;
+.card-content .title {
+  font-size: 17px;
+  color: rgb(16, 15, 15);
+  font-weight: bolder;
+  margin-bottom: 5px;
 }
 
-.card-content .days,
+.card-content .days {
+  font-size: 14px;
+  color: #7A7A7A;
+  margin-top: 10px;
+}
 .card-content .details {
   font-size: 14px;
-  color: #555;
+  color: #7A7A7A;
+  margin-bottom: 3px;
 }
 
 .card-content .price {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px 0 3px 0; 
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 16px;
   font-weight: bold;
-  margin: 5px 0;
+}
+.discounted-price {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
 }
 
+.original-price {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 14px;
+}
+
+.discount-tag {
+  background-color: #e6f4ea;
+  color: #0f9d58;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
 .card-content .rating {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 18px; /* Align rating and reviews to the right */
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  margin-top: 85px;
   margin-left: 80px;
   align-items: center;
   font-size: 14px;
-  color: #ff9800; /* Star color */
-  gap: 3px; /* Adds space between the star and rating text */
-}
+  color: #ff9800;
+  gap: 3px;
+  }
 
 .rating span {
   color: #333; /* Text color for reviews */
   font-size: 12px; /* Same size as the rating text */
 }
 
-.card-content .card-button {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: auto;
-  padding: 10px 20px;
-  background-color: #C4242B;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  gap: 10px;
-}
-
-.abc {
-  margin-right: auto;
-}
-
-.card-content .card-button:hover {
-  background-color: #b4161e;
-}
 
 .slider-container {
   position: relative;
@@ -186,9 +190,7 @@
   position: absolute;
   left: -10px;
   margin-bottom: 10px;
-}
-
-  
+}  
 
 /* Adjust the positioning of country name and button as needed */
 .country-name-container h2 {
@@ -198,8 +200,6 @@
   margin-left: 150px;
   /* Any specific styling for the country name */
 }
-
-
 
 /* Flex container for Days and Rating */
 .info-container {
@@ -228,4 +228,84 @@
 .rating span {
   color: #333;                /* Text color for review count */
   font-size: 12px;            /* Smaller font for review count */
+}
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.view-detail-btn, .book-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid #C4242B;
+  height: 45px;
+  white-space: nowrap;
+}
+
+.view-detail-btn {
+  background-color: #C4242B;
+  color: white;
+  border: none;
+}
+
+
+.book-btn {
+  background-color: white;
+  color: #C4242B;
+}
+
+.eye-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* View All button */
+.viewsall-btn {
+  position: relative;
+  align-items: center;
+  background-color: #c4242b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  margin-left: 1330px;
+  margin-top: -30px;
+  top: 50%;
+  z-index: 10;
+}
+
+/* Icon styling */
+.viewsall-btn i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  color: #C4242B;
+  border-radius: 50%;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+/* Hover effect */
+.viewsall-btn:hover {
+  color: #a81e23;
 }

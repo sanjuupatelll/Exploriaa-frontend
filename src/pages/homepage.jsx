@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Eye } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import "./homepage.css";
 
@@ -15,6 +16,7 @@ const Homepage = () => {
     slidesToScroll: 1,
     arrows: true,
   };
+ 
 
   const sliderData = [
     {
@@ -22,16 +24,17 @@ const Homepage = () => {
       cards: [
         {
           images: [
-            "https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGR1YmFpfGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGR1YmFpfGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1531586024505-b040066c2d5b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGR1YmFpfGVufDB8fDB8fHww",
             "https://images.unsplash.com/flagged/photo-1559717201-fbb671ff56b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHViYWl8ZW58MHx8MHx8fDA%3D",
           ],
           title: "Dubai Luxury Tour",
           days: "7 days & 6 nights",
-          price: "INR 1,50,000",
-          discount: "Save INR 30,000",
+          price: "₹43,000",
+          originalPrice: "₹71,000",
+          discountPercentage: "25",
           rating: "4.9",
-          reviews: "(95)",
+          reviews: "(95)"
         },
         {
           images: [
@@ -41,8 +44,9 @@ const Homepage = () => {
           ],
           title: "Explore Dubai Wonders",
           days: "5 days & 4 nights",
-          price: "INR 1,20,000",
-          discount: "Save INR 20,000",
+          price: "₹75,000",
+          originalPrice: "₹1,50,000",
+          discountPercentage: "50",
           rating: "4.8",
           reviews: "(85)",
         },
@@ -54,8 +58,9 @@ const Homepage = () => {
           ],
           title: "Dubai Adventure Tour",
           days: "6 days & 5 nights",
-          price: "INR 1,40,000",
-          discount: "Save INR 25,000",
+          price: "₹43,000",
+          originalPrice: "₹71,000",
+          discountPercentage: "25",
           rating: "4.7",
           reviews: "(78)",
         },
@@ -67,8 +72,9 @@ const Homepage = () => {
           ],
           title: "Explore Dubai Wonders",
           days: "5 days & 4 nights",
-          price: "INR 1,20,000",
-          discount: "Save INR 20,000",
+          price: "₹43,000",
+          originalPrice: "₹71,000",
+          discountPercentage: "25",
           rating: "4.8",
           reviews: "(85)",
         },
@@ -85,8 +91,9 @@ const Homepage = () => {
           ],
           title: "Golden Triangle Tour",
           days: "6 days & 5 nights",
-          price: "INR 50,000",
-          discount: "Save INR 10,000",
+          price: "₹43,000",
+          originalPrice: "₹71,000",
+          discountPercentage: "25",
           rating: "5.0",
           reviews: "(110)",
         },
@@ -98,8 +105,9 @@ const Homepage = () => {
           ],
           title: "Kerala Backwaters Tour",
           days: "5 days & 4 nights",
-          price: "INR 40,000",
-          discount: "Save INR 8,000",
+          price: "₹43,000",
+          originalPrice: "₹71,000",
+          discountPercentage: "25",
           rating: "4.9",
           reviews: "(95)",
         },
@@ -112,8 +120,9 @@ const Homepage = () => {
           ],
           title: "Rajasthan Heritage Tour",
           days: "8 days & 7 nights",
-          price: "INR 80,000",
-          discount: "Save INR 15,000",
+          price: "₹43,000",
+          originalPrice: "₹71,000",
+          discountPercentage: "25",
           rating: "4.8",
           reviews: "(120)",
         },
@@ -125,8 +134,9 @@ const Homepage = () => {
           ],
           title: "Kerala Backwaters Tour",
           days: "5 days & 4 nights",
-          price: "INR 40,000",
-          discount: "Save INR 8,000",
+          price: "₹43,000",
+          originalPrice: "₹71,000",
+          discountPercentage: "25",
           rating: "4.9",
           reviews: "(95)",
         },
@@ -143,8 +153,9 @@ const Homepage = () => {
           ],
           title: "Singapore Adventure",
           days: "4 days & 3 nights",
-          price: "INR 90,000",
-          discount: "Save INR 15,000",
+          price: "₹43,000",
+          originalPrice: "₹71,000",
+          discountPercentage: "25",
           rating: "4.9",
           reviews: "(120)",
         },
@@ -156,8 +167,9 @@ const Homepage = () => {
           ],
           title: "Singapore City Tour",
           days: "3 days & 2 nights",
-          price: "INR 75,000",
-          discount: "Save INR 10,000",
+          price: "₹90,000",
+          originalPrice: "₹1,20,000",
+          discountPercentage: "30",
           rating: "4.8",
           reviews: "(100)",
         },
@@ -169,8 +181,9 @@ const Homepage = () => {
           ],
           title: "Singapore Wildlife Expedition",
           days: "5 days & 4 nights",
-          price: "INR 1,00,000",
-          discount: "Save INR 20,000",
+          price: "₹90,000",
+          originalPrice: "₹1,20,000",
+          discountPercentage: "30",
           rating: "4.7",
           reviews: "(90)",
         },
@@ -182,8 +195,9 @@ const Homepage = () => {
           ],
           title: "Singapore City Tour",
           days: "3 days & 2 nights",
-          price: "INR 75,000",
-          discount: "Save INR 10,000",
+          price: "₹90,000",
+          originalPrice: "₹1,20,000",
+          discountPercentage: "30",
           rating: "4.8",
           reviews: "(100)",
         },
@@ -200,8 +214,9 @@ const Homepage = () => {
           ],
           title: "Paris City Tour",
           days: "5 days & 4 nights",
-          price: "INR 1,20,000",
-          discount: "Save INR 20,000",
+          price: "₹90,000",
+          originalPrice: "₹1,20,000",
+          discountPercentage: "30",
           rating: "5.0",
           reviews: "(150)",
         },
@@ -213,8 +228,9 @@ const Homepage = () => {
           ],
           title: "French Riviera Getaway",
           days: "6 days & 5 nights",
-          price: "INR 1,50,000",
-          discount: "Save INR 30,000",
+          price: "₹90,000",
+          originalPrice: "₹1,20,000",
+          discountPercentage: "30",
           rating: "4.9",
           reviews: "(120)",
         },
@@ -226,8 +242,9 @@ const Homepage = () => {
           ],
           title: "Loire Valley Castle Tour",
           days: "4 days & 3 nights",
-          price: "INR 1,00,000",
-          discount: "Save INR 15,000",
+          price: "₹90,000",
+          originalPrice: "₹1,20,000",
+          discountPercentage: "30",
           rating: "4.8",
           reviews: "(110)",
         },
@@ -239,8 +256,9 @@ const Homepage = () => {
           ],
           title: "French Riviera Getaway",
           days: "6 days & 5 nights",
-          price: "INR 1,50,000",
-          discount: "Save INR 30,000",
+          price: "₹90,000",
+          originalPrice: "₹1,20,000",
+          discountPercentage: "30",
           rating: "4.9",
           reviews: "(120)",
         },
@@ -257,8 +275,9 @@ const Homepage = () => {
           ],
           title: "Safari Adventure in Kenya",
           days: "7 days & 6 nights",
-          price: "INR 1,80,000",
-          discount: "Save INR 40,000",
+          price: "₹90,000",
+          originalPrice: "₹1,20,000",
+          discountPercentage: "30",
           rating: "5.0",
           reviews: "(200)",
         },
@@ -270,8 +289,9 @@ const Homepage = () => {
           ],
           title: "South Africa Highlights",
           days: "10 days & 9 nights",
-          price: "INR 2,00,000",
-          discount: "Save INR 50,000",
+          price: "₹90,000",
+          originalPrice: "₹1,20,000",
+          discountPercentage: "30",
           rating: "4.9",
           reviews: "(180)",
         },
@@ -283,8 +303,9 @@ const Homepage = () => {
           ],
           title: "Egyptian Wonders",
           days: "8 days & 7 nights",
-          price: "INR 1,70,000",
-          discount: "Save INR 35,000",
+          price: "₹90,000",
+          originalPrice: "₹1,20,000",
+          discountPercentage: "30",
           rating: "4.8",
           reviews: "(160)",
         },
@@ -296,8 +317,9 @@ const Homepage = () => {
           ],
           title: "South Africa Highlights",
           days: "10 days & 9 nights",
-          price: "INR 2,00,000",
-          discount: "Save INR 50,000",
+          price: "₹90,000",
+          originalPrice: "₹1,20,000",
+          discountPercentage: "30",
           rating: "4.9",
           reviews: "(180)",
         },
@@ -308,7 +330,6 @@ const Homepage = () => {
     <div className="slider-container">
       {sliderData.map((countryData, countryIndex) => (
         <div key={countryIndex} className="country-section">
-          
           {/* Country Name Container */}
           <div className="country-name-container">
             <h2>{countryData.country}</h2>
@@ -318,10 +339,10 @@ const Homepage = () => {
             {countryData.cards.map((card, cardIndex) => (
               <div key={cardIndex} className="layout-item">
                 <div className="card">
-                  <div className="image-slider">
+                  <div className="img-slider">
                     <Slider {...cardSliderSettings}>
                       {card.images.map((image, imgIndex) => (
-                        <div key={imgIndex} className="image-slide">
+                        <div key={imgIndex} className="img-slide">
                           <img src={image} alt={`Slide ${imgIndex}`} className="card-image" />
                         </div>
                       ))}
@@ -332,29 +353,24 @@ const Homepage = () => {
                     <p className="days">{card.days}</p>
                     <p className="rating">⭐ {card.rating} <span></span></p>
                   </div>
-                    <h3>{card.title}</h3>
-                    <p className="price">{card.price} <span>{card.discount}</span></p>
-                    <div className="card-buttons" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '10px', marginTop: '20px' }}>
-                     <button 
-                      className="btn btn-info" onClick={() => navigate("/detailpage")}
-                        style={{ padding: '10px 20px', fontSize: '14px', backgroundColor: '#C4242B', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', transition: 'background-color 0.3s ease', gap: '50px' }}
-                          onMouseOver={(e) => e.target.style.backgroundColor = '#9a1f1b'}
-                          onMouseOut={(e) => e.target.style.backgroundColor = '#C4242B'}>
-                          View Pack
-                          </button>
-                      <button 
-                      className="btn btn-book" onClick={() => navigate("/BookingPage")} 
-                      style={{ padding: '10px 20px', fontSize: '14px', backgroundColor: '#C4242B', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', transition: 'background-color 0.3s ease', gap: '50px' }}
-                      onMouseOver={(e) => e.target.style.backgroundColor = '#9a1f1b'}
-                      onMouseOut={(e) => e.target.style.backgroundColor = '#C4242B'}>
-                          Book Now
-                       </button>
-                     </div>
+                  <p className="title"> {card.title}  </p>
+                    <p className="price">
+                      <span className="discounted-price">{card.price}</span>
+                      <span className="original-price">{card.originalPrice}</span>
+                      <span className="discount-tag">SAVE {card.discountPercentage}% OFF</span>
+                    </p>
+                    <div className="card-buttons">
+                        <button className="view-detail-btn" onClick={() => navigate("/detailpage")}>
+                        <Eye size={16} className="eye-icon" /> View Details
+                        </button>
+                        <button className="book-btn"  onClick={() => navigate("/BookingPage")} >Book Now</button>
+                      </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+          
         </div>
       ))}
     </div>

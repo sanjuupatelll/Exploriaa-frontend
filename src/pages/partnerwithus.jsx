@@ -4,7 +4,7 @@ import Abudhabi from "../assets/images/abudhabi.svg";
 import France from "../assets/images/france.svg";
 import Japan from "../assets/images/japan.svg";
 import Jorden from "../assets/images/jordan.svg";
-import Singapore from "../assets/images/singapore.svg";
+import Singapore from "../assets/images/singapor.svg";
 import Sweden from "../assets/images/sweden.svg";
 
 

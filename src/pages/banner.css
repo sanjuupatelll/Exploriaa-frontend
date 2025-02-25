@@ -74,3 +74,90 @@
 .dot:hover {
   background-color: rgba(255, 255, 255, 1);
 }
+@media (max-width: 1200px) {
+  .banner-container {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slide-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slide-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-container {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slide-image {
+    height: 220px;
+  }
+
+  .nav-button {
+    font-size: 20px;
+    padding: 8px 12px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-container {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .slide-image {
+    height: 180px;
+  }
+
+  .nav-button {
+    font-size: 18px;
+    padding: 6px 10px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  .banner-container {
+    width: 100%;
+    margin: 5px auto;
+  }
+
+  .slide-image {
+    height: 150px;
+  }
+
+  .nav-button {
+    font-size: 16px;
+    padding: 5px 8px;
+  }
+
+  .dot {
+    width: 5px;
+    height: 5px;
+  }
+}

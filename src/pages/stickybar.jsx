@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Flame, ChevronRight, ChevronLeft } from "lucide-react";
-import "./StickyBar.css"; // Import the CSS file
+import "./StickyBar.css";
 
 const destinations = [
   { name: "Dubai", trending: true, icon: "/assets/Dubai.svg" },

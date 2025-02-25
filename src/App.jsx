@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./pages/Navbar";
 import StickyBar from "./pages/stickybar"; // Import StickyStoryBar
+import LogoSlider from "./pages/LogoSlider";
 import Homepage from "./pages/homepage";
 import Banner from "./pages/banner";
 import Footer from "./pages/footer";
@@ -27,7 +28,7 @@ function App() {
         {/* Auth Modal */}
         {isAuthModalOpen && <AuthModal isOpen={isAuthModalOpen} onClose={() => setAuthModalOpen(false)} />}
         <Routes>
-          <Route path="/" element={<><StickyBar /><Banner /><Homepage /></>} />
+          <Route path="/" element={<><StickyBar /><Banner /><Homepage /><LogoSlider /></>} />
           <Route path="/" element={<><Homepage /></>} />
           <Route path="/detailpage" element={<DetailPage />} />
           <Route path="/viewallimages" element={<ViewAllImages />} />

@@ -1,0 +1,45 @@
+.logo-slider-container {
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    background: white;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: -20px;
+  }
+  .slider-title {
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .logo-slider {
+    margin-top: 40px;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .logo-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+  }
+  .logo {
+    max-height: 200px; /* Increase this value to make logos bigger */
+    margin: 0 15px; /* Adjust spacing between logos */
+    flex-shrink: 0;
+  }
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }

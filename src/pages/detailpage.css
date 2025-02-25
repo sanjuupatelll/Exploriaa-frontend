@@ -148,42 +148,129 @@ body {
   }
   
   /* Responsive Design */
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .detail-header {
-      flex-direction: column; /* Stack header elements vertically */
-      padding: 1rem; /* Add some padding for mobile */
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
     }
-  
-    .logo {
-      text-align: center; /* Center logo on smaller screens */
-      margin-bottom: 1rem; /* Add margin below logo */
-    }
-  
+
     .search-bar {
-      margin-bottom: 1rem; /* Space between search bar and user controls */
+        width: 100%;
+        margin-top: 10px;
     }
-  
+
     .user-controls {
-      justify-content: center; /* Center the user controls */
-      gap: 1rem;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 10px;
     }
-  
-    .search-bar input {
-      max-width: 100%; /* Allow search bar to take full width */
+
+    .package-info {
+        margin-left: 0;
+        padding: 0 15px;
+        text-align: center;
+        align-items: center;
     }
-  
+
+    .package-title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .price-container {
+        justify-content: center;
+    }
+
     .image-container {
-      flex-direction: column; /* Stack columns vertically on smaller screens */
+        flex-direction: column;
+        align-items: center;
     }
-  
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+
     .right-column {
-      flex-direction: column; /* Stack the small images vertically */
+        justify-content: center;
     }
-  
+
     .small-image {
-      flex: 1 1 100%; /* Ensure each image takes full width on smaller screens */
+        flex: 1 1 48%;
     }
-  }
+}
+
+@media (max-width: 768px) {
+    .detail-header {
+        padding: 1rem;
+    }
+
+    .search-bar input {
+        max-width: 100%;
+    }
+
+    .user-controls {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .package-title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .image-container {
+        gap: 10px;
+    }
+
+    .small-image {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.8rem;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .user-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .package-title {
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .price-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .image-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .left-column img, .small-image img {
+        border-radius: 8px;
+    }
+
+    .small-image {
+        flex: 1 1 100%;
+    }
+}
   
   .container {
     display: flex;
@@ -928,9 +1015,6 @@ li {
     text-align: right;
     font-size: 14px;
   }
-  
-  
-
   /* Icon Section */
   .icon-container {
     display: flex;
@@ -939,10 +1023,8 @@ li {
     background-color: #f8f9fa;
     position: absolute;
     right: 600px; 
-    margin-top: 5px;
-      
+    margin-top: 5px;    
   }
-  
   .icon-group {
     display: flex;
     align-items: center;
@@ -950,11 +1032,9 @@ li {
     font-size: 14px;
     font-weight: 500;
   }
-  
   .icon {
     color: #000000;
   }
-
   /* Container Styles */
 .reviewcard-container {
   max-width: auto;
@@ -970,7 +1050,6 @@ li {
   background-color: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 /* Header Section */
 .reviewcard-header {
   display: flex;
@@ -1248,4 +1327,40 @@ li {
 
 .view-all-btn:hover {
   background: #e3e1e1;
+}
+@media (max-width: 1200px) {
+  /* Adjust container width, font sizes, and spacing for large tablets */
+  .ex-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Adjust styles for tablets */
+  .ex-card {
+    flex: 0 0 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust styles for mobile */
+  .ex-container {
+    flex-direction: column;
+  }
+
+  .ex-card {
+    flex: 0 0 100%;
+  }
+
+  .ex-image-slider {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smaller screens */
+  .ex-heading {
+    font-size: 16px;
+  }
 }
